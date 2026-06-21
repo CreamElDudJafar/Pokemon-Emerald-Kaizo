@@ -1174,7 +1174,7 @@ void EndLotteryCornerComputerEffect(void)
 void SetTrickHouseNuggetFlag(void)
 {
     u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET;
+    u16 flag = FLAG_HIDDEN_ITEM_TRICK_HOUSE_ENIGMA_BERRY;
     *specVar = flag;
     FlagSet(flag);
 }
@@ -1182,7 +1182,7 @@ void SetTrickHouseNuggetFlag(void)
 void ResetTrickHouseNuggetFlag(void)
 {
     u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET;
+    u16 flag = FLAG_HIDDEN_ITEM_TRICK_HOUSE_ENIGMA_BERRY;
     *specVar = flag;
     FlagClear(flag);
 }
@@ -1328,7 +1328,7 @@ u16 GetSlotMachineId(void)
 bool8 FoundAbandonedShipRoom1Key(void)
 {
     u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_1_KEY;
+    u16 flag = FLAG_HIDDEN_ITEM_ABANDONED_SHIP_STORAGE_KEY;
     *specVar = flag;
     if (!FlagGet(flag))
         return FALSE;

@@ -1811,7 +1811,11 @@ static bool8 Fishing_ShowDots(struct Task *task)
 
     AlignFishingAnimationFrames();
     task->tFrameCounter++;
+    #ifdef GUARANTEED_FISHING
+    if (FALSE)
+    #else
     if (JOY_NEW(A_BUTTON))
+    #endif
     {
         task->tStep = FISHING_NO_BITE;
         if (task->tRoundsPlayed != 0)
@@ -1864,6 +1868,10 @@ static bool8 Fishing_CheckForBite(struct Task *task)
             }
         }
 
+        #ifdef GUARANTEED_FISHING
+        bite = TRUE;
+        #endif
+
         if (!bite)
         {
             if (Random() & 1)
@@ -1897,8 +1905,12 @@ static bool8 Fishing_WaitForA(struct Task *task)
     };
 
     AlignFishingAnimationFrames();
+    #ifdef GUARANTEED_FISHING
+    if (JOY_NEW(B_BUTTON))
+    #else
     task->tFrameCounter++;
     if (task->tFrameCounter >= reelTimeouts[task->tFishingRod])
+    #endif
         task->tStep = FISHING_GOT_AWAY;
     else if (JOY_NEW(A_BUTTON))
         task->tStep++;
@@ -1917,6 +1929,7 @@ static bool8 Fishing_CheckMoreDots(struct Task *task)
 
     AlignFishingAnimationFrames();
     task->tStep++;
+    #ifndef GUARANTEED_FISHING
     if (task->tRoundsPlayed < task->tMinRoundsRequired)
     {
         task->tStep = FISHING_START_ROUND;
@@ -1929,6 +1942,7 @@ static bool8 Fishing_CheckMoreDots(struct Task *task)
         if (moreDotsChance[task->tFishingRod][task->tRoundsPlayed] > probability)
             task->tStep = FISHING_START_ROUND;
     }
+    #endif
     return FALSE;
 }
 

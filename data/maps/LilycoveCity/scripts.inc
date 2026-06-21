@@ -31,6 +31,16 @@ LilycoveCity_EventScript_SetWailmerMetatiles::
 	return
 
 LilycoveCity_EventScript_BerryGentleman::
+#ifdef MORE_RENEWABLES
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart LilycoveCity_BerryGentleman_Pokemart
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+#else
 	lock
 	faceplayer
 	dotimebasedevents
@@ -44,11 +54,26 @@ LilycoveCity_EventScript_BerryGentleman::
 	msgbox LilycoveCity_Text_BecauseYoureTrainer, MSGBOX_DEFAULT
 	release
 	end
+#endif
 
 LilycoveCity_EventScript_ReceivedBerry::
 	msgbox LilycoveCity_Text_PokeblocksSuitPokemon, MSGBOX_DEFAULT
 	release
 	end
+
+	.align 2
+LilycoveCity_BerryGentleman_Pokemart:
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_LEPPA_BERRY
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_PERSIM_BERRY
+	.2byte ITEM_LUM_BERRY
+	.2byte ITEM_SITRUS_BERRY
+	pokemartlistend
 
 LilycoveCity_EventScript_Man3::
 	msgbox LilycoveCity_Text_ContestHallInTown, MSGBOX_NPC

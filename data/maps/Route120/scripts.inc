@@ -131,7 +131,11 @@ Route120_EventScript_GiveIapapaBerry::
 	end
 
 Route120_EventScript_GiveBerry::
+#ifdef MORE_RENEWABLES
+	giveitem VAR_0x8004 255
+#else
 	giveitem VAR_0x8004
+#endif
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_DAILY_ROUTE_120_RECEIVED_BERRY
 	msgbox Route120_Text_BerryIsRareRaiseItWithCare, MSGBOX_DEFAULT
@@ -190,7 +194,7 @@ Route120_EventScript_StevenBattleKecleon::
 	playmoncry SPECIES_KECLEON, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_KECLEON, 30
+	setwildbattle SPECIES_KECLEON, 50
 	setvar VAR_0x8009, 0
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle

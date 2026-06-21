@@ -93,9 +93,9 @@ FortreeCity_Gym_EventScript_Humberto::
 	msgbox FortreeCity_Gym_Text_HumbertoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-FortreeCity_Gym_EventScript_Darius::
-	trainerbattle_single TRAINER_DARIUS, FortreeCity_Gym_Text_DariusIntro, FortreeCity_Gym_Text_DariusDefeat
-	msgbox FortreeCity_Gym_Text_DariusPostBattle, MSGBOX_AUTOCLOSE
+FortreeCity_Gym_EventScript_Sora::
+	trainerbattle_single TRAINER_SORA, FortreeCity_Gym_Text_SoraIntro, FortreeCity_Gym_Text_SoraDefeat
+	msgbox FortreeCity_Gym_Text_SoraPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 FortreeCity_Gym_EventScript_GymGuide::
@@ -163,7 +163,7 @@ FortreeCity_Gym_Text_JaredPostBattle:
 	.string "our LEADER?$"
 
 FortreeCity_Gym_Text_EdwardoIntro:
-	.string "The lovers of BIRD POKéMON aspire\n"
+	.string "The lovers of nature aspire\n"
 	.string "to join this GYM.\p"
 	.string "As a member of the FORTREE GYM,\n"
 	.string "I'm not allowed to lose!$"
@@ -218,15 +218,15 @@ FortreeCity_Gym_Text_HumbertoPostBattle:
 	.string "Don't get distracted staring at WINONA\l"
 	.string "or you'll go crashing down in a heap!$"
 
-FortreeCity_Gym_Text_DariusIntro:
+FortreeCity_Gym_Text_SoraIntro:
 	.string "You'd better know that there are all\n"
 	.string "sorts of FLYING-type POKéMON.\p"
 	.string "You do know that, right?$"
 
-FortreeCity_Gym_Text_DariusDefeat:
+FortreeCity_Gym_Text_SoraDefeat:
 	.string "You seem to know your stuff!$"
 
-FortreeCity_Gym_Text_DariusPostBattle:
+FortreeCity_Gym_Text_SoraPostBattle:
 	.string "Sure, you beat me all right.\n"
 	.string "But you'd better watch it! Our LEADER\l"
 	.string "WINONA's POKéMON are all business.$"

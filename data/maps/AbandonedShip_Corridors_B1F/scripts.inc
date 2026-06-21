@@ -48,20 +48,20 @@ AbandonedShip_Corridors_B1F_EventScript_DoorIsUnlocked::
 	releaseall
 	end
 
-AbandonedShip_Corridors_B1F_EventScript_Duncan::
-	trainerbattle_single TRAINER_DUNCAN, AbandonedShip_Corridors_B1F_Text_DuncanIntro, AbandonedShip_Corridors_B1F_Text_DuncanDefeat
-	msgbox AbandonedShip_Corridors_B1F_Text_DuncanPostBattle, MSGBOX_AUTOCLOSE
+AbandonedShip_Corridors_B1F_EventScript_Grunt2::
+	trainerbattle_single TRAINER_GRUNT_ABANDONED_SHIP_2, AbandonedShip_Corridors_B1F_Text_Grunt2Intro, AbandonedShip_Corridors_B1F_Text_Grunt2Defeat
+	msgbox AbandonedShip_Corridors_B1F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-AbandonedShip_Corridors_B1F_Text_DuncanIntro:
-	.string "When we go out to sea, we SAILORS\n"
+AbandonedShip_Corridors_B1F_Text_Grunt2Intro:
+	.string "When we go out to sea, we AQUAS\n"
 	.string "always bring our POKéMON.\l"
 	.string "How about a quick battle?$"
 
-AbandonedShip_Corridors_B1F_Text_DuncanDefeat:
+AbandonedShip_Corridors_B1F_Text_Grunt2Defeat:
 	.string "Whoops, I'm sunk!$"
 
-AbandonedShip_Corridors_B1F_Text_DuncanPostBattle:
+AbandonedShip_Corridors_B1F_Text_Grunt2PostBattle:
 	.string "The ship's bottom has sunk into the\n"
 	.string "depths.\p"
 	.string "If a POKéMON knew how to go underwater,\n"

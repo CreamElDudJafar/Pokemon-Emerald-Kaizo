@@ -242,6 +242,7 @@ void CableCar(void)
 
 static void CB2_LoadCableCar(void)
 {
+    u16 imebak;
     u8 i = 0;
     u32 sizeOut = 0;
 
@@ -346,7 +347,10 @@ static void CB2_LoadCableCar(void)
         gMain.state++;
         break;
     case 9:
-        IntrEnable(INTR_FLAG_VBLANK);
+        imebak = REG_IME;
+        REG_IME = 0;
+        REG_IE |= INTR_FLAG_VBLANK;
+        REG_IME = imebak;
         SetVBlankCallback(VBlankCB_CableCar);
         SetMainCallback2(CB2_CableCar);
         CreateTask(Task_CableCar, 0);

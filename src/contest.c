@@ -5338,7 +5338,7 @@ static void SetMoveSpecificAnimData(u8 contestant)
         break;
     case MOVE_SOLAR_BEAM:
     case MOVE_RAZOR_WIND:
-    case MOVE_SKULL_BASH:
+    case MOVE_HEAD_SMASH:
     case MOVE_SKY_ATTACK:
         if (eContest.moveAnimTurnCount == 0)
         {

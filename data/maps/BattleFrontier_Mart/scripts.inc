@@ -13,19 +13,19 @@ BattleFrontier_Mart_EventScript_Clerk::
 
 	.align 2
 BattleFrontier_Mart_Pokemart:
-	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_HYPER_POTION
-	.2byte ITEM_MAX_POTION
-	.2byte ITEM_FULL_RESTORE
-	.2byte ITEM_FULL_HEAL
-	.2byte ITEM_REVIVE
-	.2byte ITEM_MAX_REPEL
-	.2byte ITEM_PROTEIN
-	.2byte ITEM_CALCIUM
-	.2byte ITEM_IRON
-	.2byte ITEM_ZINC
-	.2byte ITEM_CARBOS
-	.2byte ITEM_HP_UP
+	.2byte ITEM_TM_SHOCK_WAVE
+	.2byte ITEM_TM_HIDDEN_POWER
+	.2byte ITEM_TM_THUNDERBOLT
+	.2byte ITEM_TM_PROTECT
+	.2byte ITEM_TM_FOCUS_PUNCH
+	.2byte ITEM_TM_FACADE
+	.2byte ITEM_TM_ROCK_TOMB
+	.2byte ITEM_TM_IRON_TAIL
+	.2byte ITEM_TM_ROAR
+	.2byte ITEM_TM_DRAGON_CLAW
+	.2byte ITEM_TM_OVERHEAT
+	.2byte ITEM_TM_EARTHQUAKE
+	.2byte ITEM_TM_HYPER_BEAM
 	pokemartlistend
 
 BattleFrontier_Mart_EventScript_OldMan::

@@ -1,6 +1,8 @@
 #ifndef GUARD_CONSTANTS_EVENT_OBJECT_MOVEMENT_H
 #define GUARD_CONSTANTS_EVENT_OBJECT_MOVEMENT_H
 
+#include "../config.h"
+
 #define MOVEMENT_TYPE_NONE                             0x0
 #define MOVEMENT_TYPE_LOOK_AROUND                      0x1
 #define MOVEMENT_TYPE_WANDER_AROUND                    0x2
@@ -83,6 +85,12 @@
 #define MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_LEFT        0x4F
 #define MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT       0x50
 #define NUM_MOVEMENT_TYPES                             0x51
+
+#ifdef MORE_RENEWABLES
+#define MOVEMENT_TYPE_LILYCOVE_BERRY_MAN               MOVEMENT_TYPE_FACE_DOWN
+#else
+#define MOVEMENT_TYPE_LILYCOVE_BERRY_MAN               MOVEMENT_TYPE_WANDER_AROUND
+#endif
 
 #define MOVEMENT_ACTION_FACE_DOWN                       0x0
 #define MOVEMENT_ACTION_FACE_UP                         0x1

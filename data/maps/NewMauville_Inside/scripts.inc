@@ -19,21 +19,21 @@ NewMauville_Inside_EventScript_TryRemoveVoltorb::
 NewMauville_Inside_OnTransition:
 	setvar VAR_TEMP_1, 0
 	setvar VAR_TEMP_2, 0
-	call_if_unset FLAG_DEFEATED_VOLTORB_1_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowVoltorb1
-	call_if_unset FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowVoltorb2
-	call_if_unset FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowVoltorb3
+	call_if_unset FLAG_DEFEATED_ENTEI_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowEntei
+	call_if_unset FLAG_DEFEATED_RAIKOU_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowRaikou
+	call_if_unset FLAG_DEFEATED_SUICUNE_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowSuicune
 	end
 
-NewMauville_Inside_EventScript_ShowVoltorb1::
-	clearflag FLAG_HIDE_NEW_MAUVILLE_VOLTORB_1
+NewMauville_Inside_EventScript_ShowEntei::
+	clearflag FLAG_HIDE_NEW_MAUVILLE_ENTEI
 	return
 
-NewMauville_Inside_EventScript_ShowVoltorb2::
-	clearflag FLAG_HIDE_NEW_MAUVILLE_VOLTORB_2
+NewMauville_Inside_EventScript_ShowRaikou::
+	clearflag FLAG_HIDE_NEW_MAUVILLE_RAIKOU
 	return
 
-NewMauville_Inside_EventScript_ShowVoltorb3::
-	clearflag FLAG_HIDE_NEW_MAUVILLE_VOLTORB_3
+NewMauville_Inside_EventScript_ShowSuicune::
+	clearflag FLAG_HIDE_NEW_MAUVILLE_SUICUNE
 	return
 
 NewMauville_Inside_OnLoad:
@@ -173,75 +173,69 @@ NewMauville_Inside_EventScript_GeneratorOff::
 	releaseall
 	end
 
-NewMauville_Inside_EventScript_Voltorb1::
+NewMauville_Inside_EventScript_Entei::
 	lock
 	faceplayer
-	setwildbattle SPECIES_VOLTORB, 25
+	setwildbattle SPECIES_ENTEI, 100
 	waitse
-	playmoncry SPECIES_VOLTORB, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_ENTEI, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_EventScript_DefeatedVoltorb1
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_EventScript_DefeatedVoltorb1
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_EventScript_DefeatedVoltorb1
-	setflag FLAG_DEFEATED_VOLTORB_1_NEW_MAUVILLE
-	release
-	end
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_EventScript_DefeatedEntei
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_EventScript_DefeatedEntei
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_EventScript_DefeatedEntei
+	goto NewMauville_Inside_EventScript_DefeatedEntei
 
-NewMauville_Inside_EventScript_DefeatedVoltorb1::
-	setflag FLAG_DEFEATED_VOLTORB_1_NEW_MAUVILLE
+NewMauville_Inside_EventScript_DefeatedEntei::
+	setflag FLAG_HIDE_NEW_MAUVILLE_ENTEI
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-NewMauville_Inside_EventScript_Voltorb2::
+NewMauville_Inside_EventScript_Raikou::
 	lock
 	faceplayer
-	setwildbattle SPECIES_VOLTORB, 25
+	setwildbattle SPECIES_RAIKOU, 100
 	waitse
-	playmoncry SPECIES_VOLTORB, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_RAIKOU, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_EventScript_DefeatedVoltorb2
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_EventScript_DefeatedVoltorb2
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_EventScript_DefeatedVoltorb2
-	setflag FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE
-	release
-	end
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_EventScript_DefeatedRaikou
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_EventScript_DefeatedRaikou
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_EventScript_DefeatedRaikou
+	goto NewMauville_Inside_EventScript_DefeatedRaikou
 
-NewMauville_Inside_EventScript_DefeatedVoltorb2::
-	setflag FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE
+NewMauville_Inside_EventScript_DefeatedRaikou::
+	setflag FLAG_HIDE_NEW_MAUVILLE_RAIKOU
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-NewMauville_Inside_EventScript_Voltorb3::
+NewMauville_Inside_EventScript_Suicune::
 	lock
 	faceplayer
-	setwildbattle SPECIES_VOLTORB, 25
+	setwildbattle SPECIES_SUICUNE, 100
 	waitse
-	playmoncry SPECIES_VOLTORB, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_SUICUNE, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_EventScript_DefeatedVoltorb3
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_EventScript_DefeatedVoltorb3
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_EventScript_DefeatedVoltorb3
-	setflag FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE
-	release
-	end
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_EventScript_DefeatedSuicune
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_EventScript_DefeatedSuicune
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_EventScript_DefeatedSuicune
+	goto NewMauville_Inside_EventScript_DefeatedSuicune
 
-NewMauville_Inside_EventScript_DefeatedVoltorb3::
-	setflag FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE
+NewMauville_Inside_EventScript_DefeatedSuicune::
+	setflag FLAG_HIDE_NEW_MAUVILLE_SUICUNE
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 

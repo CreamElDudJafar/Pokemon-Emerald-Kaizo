@@ -50,7 +50,10 @@ LilycoveCity_DepartmentStore_2F_EventScript_ClerkRight::
 
 	.align 2
 LilycoveCity_DepartmentStore_2F_Pokemart2:
-	.2byte ITEM_POTION
+#ifdef RARE_CANDY_MARTS
+	.2byte ITEM_RARE_CANDY
+#endif
+	.2byte ITEM_HARBOR_MAIL
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_HYPER_POTION
 	.2byte ITEM_MAX_POTION

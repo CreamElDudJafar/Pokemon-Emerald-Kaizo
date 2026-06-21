@@ -1885,11 +1885,11 @@ const u8 gStatStageRatios[MAX_STAT_STAGE + 1][2] =
 static const u16 sDeoxysBaseStats[] =
 {
     [STAT_HP]    = 50,
-    [STAT_ATK]   = 95,
-    [STAT_DEF]   = 90,
-    [STAT_SPEED] = 180,
-    [STAT_SPATK] = 95,
-    [STAT_SPDEF] = 90,
+    [STAT_ATK]   = 180,
+    [STAT_DEF]   = 20,
+    [STAT_SPEED] = 150,
+    [STAT_SPATK] = 180,
+    [STAT_SPDEF] = 20,
 };
 
 // The classes used by other players in the Union Room.
@@ -6460,7 +6460,7 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_DOME_ACE:
         case TRAINER_CLASS_PALACE_MAVEN:
         case TRAINER_CLASS_ARENA_TYCOON:
-        case TRAINER_CLASS_FACTORY_HEAD:
+        case TRAINER_CLASS_SUPERBOSS:
         case TRAINER_CLASS_PIKE_QUEEN:
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
@@ -6738,7 +6738,7 @@ const u8 *GetTrainerPartnerName(void)
     {
         if (gPartnerTrainerId == TRAINER_STEVEN_PARTNER)
         {
-            return gTrainers[TRAINER_STEVEN].trainerName;
+            return gTrainers[TRAINER_STEVEN_TAG].trainerName;
         }
         else
         {

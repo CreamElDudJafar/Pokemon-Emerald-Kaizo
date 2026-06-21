@@ -632,29 +632,30 @@ void SortBerriesOrTMHMs(struct BagPocket *bagPocket)
     }
 }
 
-void MoveItemSlotInList(struct ItemSlot *itemSlots, u32 from, u32 to)
+void MoveItemSlotInList(struct ItemSlot *itemSlots_, u32 from, u32 to_)
 {
-    struct ItemSlot firstSlot;
-    s16 i;
+    // dumb assignments needed to match
+    struct ItemSlot *itemSlots = itemSlots_;
+    u32 to = to_;
 
-    if (from == to)
-        return;
-
-    firstSlot = itemSlots[from];
-
-    if (to > from)
+    if (from != to)
     {
-        to--;
-        for (i = (s16)from; i < (s16)to; i++)
-            itemSlots[i] = itemSlots[i + 1];
+        s16 i, count;
+        struct ItemSlot firstSlot = itemSlots[from];
+
+        if (to > from)
+        {
+            to--;
+            for (i = from, count = to; i < count; i++)
+                itemSlots[i] = itemSlots[i + 1];
+        }
+        else
+        {
+            for (i = from, count = to; i > count; i--)
+                itemSlots[i] = itemSlots[i - 1];
+        }
+        itemSlots[to] = firstSlot;
     }
-    else
-    {
-        for (i = (s16)from; i > (s16)to; i--)
-            itemSlots[i] = itemSlots[i - 1];
-    }
-    
-    itemSlots[to] = firstSlot;
 }
 
 void ClearBag(void)
@@ -940,4 +941,9 @@ ItemUseFunc GetItemBattleFunc(u16 itemId)
 u8 GetItemSecondaryId(u16 itemId)
 {
     return gItems[SanitizeItemId(itemId)].secondaryId;
+}
+
+void GetHoldEffectParam_Script()
+{
+    VarSet(VAR_RESULT, GetItemHoldEffectParam(VarGet(VAR_0x8004)));
 }

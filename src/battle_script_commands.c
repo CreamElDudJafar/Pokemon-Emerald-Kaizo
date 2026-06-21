@@ -738,10 +738,10 @@ static const u16 sMovesForbiddenToCopy[] =
     MOVE_SLEEP_TALK,
     MOVE_THIEF,
     MOVE_FOLLOW_ME,
-    MOVE_SNATCH,
+    MOVE_HIDDEN_POWER_FIGHTING,
     MOVE_HELPING_HAND,
-    MOVE_COVET,
-    MOVE_TRICK,
+    MOVE_HIDDEN_POWER_BUG,
+    MOVE_HIDDEN_POWER_FLYING,
     MOVE_FOCUS_PUNCH,
     METRONOME_FORBIDDEN_END
 };
@@ -972,7 +972,7 @@ static void Cmd_attackcanceler(void)
     {
         if ((gProtectStructs[gBattlerByTurnOrder[i]].stealMove) && gBattleMoves[gCurrentMove].flags & FLAG_SNATCH_AFFECTED)
         {
-            PressurePPLose(gBattlerAttacker, gBattlerByTurnOrder[i], MOVE_SNATCH);
+            PressurePPLose(gBattlerAttacker, gBattlerByTurnOrder[i], MOVE_HIDDEN_POWER_FIGHTING);
             gProtectStructs[gBattlerByTurnOrder[i]].stealMove = FALSE;
             gBattleScripting.battler = gBattlerByTurnOrder[i];
             BattleScriptPushCursor();

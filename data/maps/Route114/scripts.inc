@@ -79,24 +79,24 @@ Route114_EventScript_LanettesHouseSign::
 	msgbox Route114_Text_LanettesHouse, MSGBOX_SIGN
 	end
 
-Route114_EventScript_Lenny::
-	trainerbattle_single TRAINER_LENNY, Route114_Text_LennyIntro, Route114_Text_LennyDefeat
-	msgbox Route114_Text_LennyPostBattle, MSGBOX_AUTOCLOSE
+Route114_EventScript_Grunt7::
+	trainerbattle_single TRAINER_GRUNT_ROUTE_114_7, Route114_Text_Grunt7Intro, Route114_Text_Grunt7Defeat
+	msgbox Route114_Text_Grunt7PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route114_EventScript_Lucas::
-	trainerbattle_single TRAINER_LUCAS_1, Route114_Text_LucasIntro, Route114_Text_LucasDefeat
-	msgbox Route114_Text_LucasPostBattle, MSGBOX_AUTOCLOSE
+Route114_EventScript_Grunt9::
+	trainerbattle_single TRAINER_GRUNT_ROUTE_114_9, Route114_Text_Grunt9Intro, Route114_Text_Grunt9Defeat
+	msgbox Route114_Text_Grunt9PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route114_EventScript_Shane::
-	trainerbattle_single TRAINER_SHANE, Route114_Text_ShaneIntro, Route114_Text_ShaneDefeat
-	msgbox Route114_Text_ShanePostBattle, MSGBOX_AUTOCLOSE
+Route114_EventScript_Grunt5::
+	trainerbattle_single TRAINER_GRUNT_ROUTE_114_5, Route114_Text_Grunt5Intro, Route114_Text_Grunt5Defeat
+	msgbox Route114_Text_Grunt5PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route114_EventScript_Nancy::
-	trainerbattle_single TRAINER_NANCY, Route114_Text_NancyIntro, Route114_Text_NancyDefeat
-	msgbox Route114_Text_NancyPostBattle, MSGBOX_AUTOCLOSE
+Route114_EventScript_Grunt2::
+	trainerbattle_single TRAINER_GRUNT_ROUTE_114_2, Route114_Text_Grunt2Intro, Route114_Text_Grunt2Defeat
+	msgbox Route114_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route114_EventScript_Steve::
@@ -141,14 +141,14 @@ Route114_EventScript_RematchBernie::
 	msgbox Route114_Text_BerniePostRematch, MSGBOX_AUTOCLOSE
 	end
 
-Route114_EventScript_Claude::
-	trainerbattle_single TRAINER_CLAUDE, Route114_Text_ClaudeIntro, Route114_Text_ClaudeDefeat
-	msgbox Route114_Text_ClaudePostBattle, MSGBOX_AUTOCLOSE
+Route114_EventScript_Grunt3::
+	trainerbattle_single TRAINER_GRUNT_ROUTE_114_3, Route114_Text_Grunt3Intro, Route114_Text_Grunt3Defeat
+	msgbox Route114_Text_Grunt3PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route114_EventScript_Nolan::
-	trainerbattle_single TRAINER_NOLAN, Route114_Text_NolanIntro, Route114_Text_NolanDefeat
-	msgbox Route114_Text_NolanPostBattle, MSGBOX_AUTOCLOSE
+Route114_EventScript_Grunt4::
+	trainerbattle_single TRAINER_GRUNT_ROUTE_114_4, Route114_Text_Grunt4Intro, Route114_Text_Grunt4Defeat
+	msgbox Route114_Text_Grunt4PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route114_EventScript_Tyra::
@@ -161,19 +161,19 @@ Route114_EventScript_Ivy::
 	msgbox Route114_Text_IvyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route114_EventScript_Angelina::
-	trainerbattle_single TRAINER_ANGELINA, Route114_Text_AngelinaIntro, Route114_Text_AngelinaDefeat
-	msgbox Route114_Text_AngelinaPostBattle, MSGBOX_AUTOCLOSE
+Route114_EventScript_Grunt1::
+	trainerbattle_single TRAINER_GRUNT_ROUTE_114_1, Route114_Text_Grunt1Intro, Route114_Text_Grunt1Defeat
+	msgbox Route114_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route114_EventScript_Charlotte::
-	trainerbattle_single TRAINER_CHARLOTTE, Route114_Text_CharlotteIntro, Route114_Text_CharlotteDefeat
-	msgbox Route114_Text_CharlottePostBattle, MSGBOX_AUTOCLOSE
+Route114_EventScript_Grunt8::
+	trainerbattle_single TRAINER_GRUNT_ROUTE_114_8, Route114_Text_Grunt8Intro, Route114_Text_Grunt8Defeat
+	msgbox Route114_Text_Grunt8PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route114_EventScript_Kai::
-	trainerbattle_single TRAINER_KAI, Route114_Text_KaiIntro, Route114_Text_KaiDefeat
-	msgbox Route114_Text_KaiPostBattle, MSGBOX_AUTOCLOSE
+Route114_EventScript_Grunt6::
+	trainerbattle_single TRAINER_GRUNT_ROUTE_114_6, Route114_Text_Grunt6Intro, Route114_Text_Grunt6Defeat
+	msgbox Route114_Text_Grunt6PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route114_Text_AllMyMonDoesIsRoarTakeThis:

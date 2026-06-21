@@ -37,7 +37,7 @@ Route126_EventScript_Isobel::
 	end
 
 Route126_EventScript_Sienna::
-	trainerbattle_single TRAINER_SIENNA, Route126_Text_SiennaIntro, Route126_Text_SiennaDefeat
+	trainerbattle_single TRAINER_ARCHIE_MARINE_CAVE, Route126_Text_SiennaIntro, Route126_Text_SiennaDefeat
 	msgbox Route126_Text_SiennaPostBattle, MSGBOX_AUTOCLOSE
 	end
 

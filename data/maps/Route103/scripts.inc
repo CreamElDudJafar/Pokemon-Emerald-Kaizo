@@ -187,7 +187,7 @@ Route103_Movement_WatchRivalExitFacingEastOrWest:
 	walk_in_place_faster_down
 	step_end
 
-Route103_EventScript_Boy::
+DewfordTown_EventScript_Fisherman::
 	msgbox Route103_Text_ShouldHaveBroughtPotion, MSGBOX_NPC
 	end
 

@@ -5,7 +5,7 @@ MauvilleCity_House2_EventScript_Woman::
 	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_COIN_CASE, MauvilleCity_House2_EventScript_ReceivedCoinCase
-	msgbox MauvilleCity_House2_Text_BuyHarborMailAtSlateport, MSGBOX_DEFAULT
+	msgbox MauvilleCity_House2_Text_BuyHarborMailAtLilycove, MSGBOX_DEFAULT
 	checkitem ITEM_HARBOR_MAIL
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_House2_EventScript_AskToTradeForHarborMail
 	release
@@ -40,11 +40,11 @@ MauvilleCity_House2_EventScript_DeclineTrade::
 	release
 	end
 
-MauvilleCity_House2_Text_BuyHarborMailAtSlateport:
+MauvilleCity_House2_Text_BuyHarborMailAtLilycove:
 	.string "If I had a BIKE, it'd be easy to cycle to\n"
-	.string "SLATEPORT for some shopping.\p"
+	.string "LILYCOVE for some shopping.\p"
 	.string "I'd be able to buy HARBOR MAIL at the\n"
-	.string "POKéMON MART in SLATEPORT…$"
+	.string "POKéMON MART in LILYCOVE…$"
 
 MauvilleCity_House2_Text_TradeHarborMailForCoinCase:
 	.string "Oh! You have HARBOR MAIL?\n"

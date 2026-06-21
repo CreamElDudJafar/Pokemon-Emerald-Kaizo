@@ -28,9 +28,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 10,
-      "y": 2,
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+      "x": 7,
+      "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -54,21 +54,21 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 5,
-      "y": 12,
+      "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+      "x": 3,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_range_x": 1,
+      "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route110_TrickHousePuzzle7_EventScript_ItemTropicMail",
-      "flag": "FLAG_ITEM_TRICK_HOUSE_PUZZLE_7_TROPIC_MAIL"
+      "script": "Route114_EventScript_Poochyena",
+      "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
-      "x": 9,
+      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "x": 7,
       "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -80,9 +80,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 8,
-      "y": 13,
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "x": 1,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -94,10 +94,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
-      "x": 9,
-      "y": 12,
+      "x": 0,
+      "y": 17,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -115,7 +115,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
+      "script": "Route114_EventScript_Poochyena",
       "flag": "0"
     },
     {
@@ -128,7 +128,33 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
+      "script": "Route114_EventScript_Poochyena",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+      "x": 11,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route114_EventScript_Poochyena",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+      "x": 3,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route114_EventScript_Poochyena",
       "flag": "0"
     }
   ],
@@ -141,8 +167,8 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 1,
-      "y": 21,
+      "x": 0,
+      "y": 19,
       "elevation": 3,
       "dest_map": "MAP_ROUTE110_TRICK_HOUSE_ENTRANCE",
       "dest_warp_id": "2"
@@ -155,8 +181,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 13,
-      "y": 4,
+      "x": 0,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE7",
       "dest_warp_id": "4"
@@ -165,12 +191,12 @@
       "x": 7,
       "y": 3,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE7",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_ROUTE110_TRICK_HOUSE_ENTRANCE",
+      "dest_warp_id": "2"
     },
     {
-      "x": 13,
-      "y": 11,
+      "x": 9,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE7",
       "dest_warp_id": "6"
@@ -179,47 +205,47 @@
       "x": 4,
       "y": 3,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE7",
-      "dest_warp_id": "5"
+      "dest_map": "MAP_ROUTE110_TRICK_HOUSE_ENTRANCE",
+      "dest_warp_id": "2"
     },
     {
       "x": 1,
       "y": 17,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE7",
-      "dest_warp_id": "8"
-    },
-    {
-      "x": 0,
-      "y": 11,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE7",
-      "dest_warp_id": "7"
+      "dest_map": "MAP_ROUTE110_TRICK_HOUSE_ENTRANCE",
+      "dest_warp_id": "2"
     },
     {
       "x": 2,
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE7",
-      "dest_warp_id": "10"
+      "dest_warp_id": "7"
     },
     {
       "x": 4,
-      "y": 13,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE7",
-      "dest_warp_id": "9"
+      "dest_warp_id": "10"
     },
     {
       "x": 1,
-      "y": 3,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE7",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 4,
       "elevation": 0,
       "dest_map": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE7",
       "dest_warp_id": "12"
     },
     {
-      "x": 8,
-      "y": 12,
+      "x": 5,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_ROUTE110_TRICK_HOUSE_PUZZLE7",
       "dest_warp_id": "11"
@@ -266,8 +292,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 6,
-      "y": 17,
+      "x": 10,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route110_TrickHousePuzzle7_EventScript_Scroll"

@@ -4,6 +4,7 @@ PacifidlogTown_House2_MapScripts::
 PacifidlogTown_House2_EventScript_FanClubYoungerBrother::
 	lock
 	faceplayer
+#ifndef TMS_AND_COINS
 	dotimebasedevents
 	call PacifidlogTown_House2_EventScript_UpdateFanClubTMFlag
 	goto_if_set FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK, PacifidlogTown_House2_EventScript_ComeBackInXDays
@@ -14,6 +15,7 @@ PacifidlogTown_House2_EventScript_FanClubYoungerBrother::
 	goto_if_ge VAR_RESULT, FRIENDSHIP_150_TO_199, PacifidlogTown_House2_EventScript_GiveReturn
 	specialvar VAR_RESULT, GetLeadMonFriendshipScore
 	goto_if_ge VAR_RESULT, FRIENDSHIP_50_TO_99, PacifidlogTown_House2_EventScript_PutInEffort
+#endif
 	goto PacifidlogTown_House2_EventScript_GiveFrustration
 	end
 

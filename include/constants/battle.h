@@ -1,6 +1,8 @@
 #ifndef GUARD_CONSTANTS_BATTLE_H
 #define GUARD_CONSTANTS_BATTLE_H
 
+#include "../config.h"
+
 /*
  * A battler may be in one of four positions on the field. The first bit determines
  * what side the battler is on, either the player's side or the opponent's side.
@@ -319,9 +321,15 @@ enum BattlerId
 #define BATTLE_ENVIRONMENT_BUILDING     8
 #define BATTLE_ENVIRONMENT_PLAIN        9
 
+#ifdef FASTER_BATTLE_ANIMS
+#define B_WAIT_TIME_LONG  5
+#define B_WAIT_TIME_MED   1
+#define B_WAIT_TIME_SHORT 1
+#else
 #define B_WAIT_TIME_LONG  64
 #define B_WAIT_TIME_MED   48
 #define B_WAIT_TIME_SHORT 32
+#endif
 
 #define CASTFORM_NORMAL     0
 #define CASTFORM_FIRE       1

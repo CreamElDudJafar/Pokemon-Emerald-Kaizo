@@ -12,7 +12,7 @@ Common_EventScript_SetGymTrainers::
 
 RustboroCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_JOSH
-	settrainerflag TRAINER_TOMMY
+	settrainerflag TRAINER_TAMMY_RUSTBORO_GYM
 	settrainerflag TRAINER_MARC
 	return
 
@@ -34,10 +34,10 @@ MauvilleCity_Gym_SetGymTrainers::
 	return
 
 LavaridgeTown_Gym_SetGymTrainers::
-	settrainerflag TRAINER_COLE
+	settrainerflag TRAINER_COLETTE
 	settrainerflag TRAINER_AXLE
 	settrainerflag TRAINER_KEEGAN
-	settrainerflag TRAINER_GERALD
+	settrainerflag TRAINER_GERALDINE
 	settrainerflag TRAINER_DANIELLE
 	settrainerflag TRAINER_JACE
 	settrainerflag TRAINER_JEFF
@@ -60,7 +60,7 @@ FortreeCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_ASHLEY
 	settrainerflag TRAINER_EDWARDO
 	settrainerflag TRAINER_HUMBERTO
-	settrainerflag TRAINER_DARIUS
+	settrainerflag TRAINER_UNUSED_803
 	return
 
 MossdeepCity_Gym_SetGymTrainers::
@@ -85,7 +85,7 @@ SootopolisCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_CONNIE
 	settrainerflag TRAINER_BRIDGET
 	settrainerflag TRAINER_OLIVIA
-	settrainerflag TRAINER_TIFFANY
+	settrainerflag TRAINER_WALLACE
 	settrainerflag TRAINER_BETHANY
 	settrainerflag TRAINER_ANNIKA
 	settrainerflag TRAINER_DAPHNE

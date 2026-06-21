@@ -426,7 +426,7 @@
     },
     {
       "local_id": "LOCALID_SLATEPORT_GRUNT_8",
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
       "x": 20,
       "y": 26,
       "elevation": 3,
@@ -467,7 +467,7 @@
     },
     {
       "local_id": "LOCALID_SLATEPORT_GRUNT_11",
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
       "x": 25,
       "y": 27,
       "elevation": 3,

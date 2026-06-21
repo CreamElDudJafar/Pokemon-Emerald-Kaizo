@@ -5,7 +5,7 @@ RustboroCity_House1_EventScript_Trader::
 	lock
 	faceplayer
 	goto_if_set FLAG_RUSTBORO_NPC_TRADE_COMPLETED, RustboroCity_House1_EventScript_TradeCompleted
-	setvar VAR_0x8008, INGAME_TRADE_SEEDOT
+	setvar VAR_0x8008, INGAME_TRADE_MOLTRES
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
 	copyvar VAR_0x8009, VAR_RESULT
@@ -39,7 +39,7 @@ RustboroCity_House1_EventScript_NotRequestedMon::
 	end
 
 RustboroCity_House1_EventScript_TradeCompleted::
-	msgbox RustboroCity_House1_Text_AnyPokemonCanBeCute, MSGBOX_DEFAULT
+	msgbox RustboroCity_House1_Text_AnyPokemonCanBeGood, MSGBOX_DEFAULT
 	release
 	end
 
@@ -48,7 +48,7 @@ RustboroCity_House1_EventScript_Hiker::
 	end
 
 RustboroCity_House1_Text_IllTradeIfYouWant:
-	.string "Huh? My POKéMON is cute?\n"
+	.string "Huh? My POKéMON is rare?\n"
 	.string "Sure, I knew that.\p"
 	.string "But if you really want, I'm willing\n"
 	.string "to trade it to you.\p"
@@ -65,10 +65,10 @@ RustboroCity_House1_Text_DoesntLookLikeMonToMe:
 
 RustboroCity_House1_Text_YouDontWantToThatsOkay:
 	.string "Oh, if you don't want to, that's okay.\n"
-	.string "But my POKéMON is cute, you know…$"
+	.string "But my POKéMON is rare, you know…$"
 
-RustboroCity_House1_Text_AnyPokemonCanBeCute:
-	.string "Any POKéMON can be cute if you raise\n"
+RustboroCity_House1_Text_AnyPokemonCanBeGood:
+	.string "Any POKéMON can be good if you raise\n"
 	.string "it with care and kindness.$"
 
 RustboroCity_House1_Text_AllSortsOfPlaces:

@@ -2,7 +2,7 @@ Route107_MapScripts::
 	.byte 0
 
 Route107_EventScript_Darrin::
-	trainerbattle_single TRAINER_DARRIN, Route107_Text_DarrinIntro, Route107_Text_DarrinDefeated
+	trainerbattle_single TRAINER_DAYTON, Route107_Text_DarrinIntro, Route107_Text_DarrinDefeated
 	msgbox Route107_Text_DarrinPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -28,12 +28,12 @@ Route107_EventScript_TonyRematch::
 	end
 
 Route107_EventScript_Denise::
-	trainerbattle_single TRAINER_DENISE, Route107_Text_DeniseIntro, Route107_Text_DeniseDefeated
+	trainerbattle_single TRAINER_SORA, Route107_Text_DeniseIntro, Route107_Text_DeniseDefeated
 	msgbox Route107_Text_DenisePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route107_EventScript_Beth::
-	trainerbattle_single TRAINER_BETH, Route107_Text_BethIntro, Route107_Text_BethDefeated
+	trainerbattle_single TRAINER_FABIAN, Route107_Text_BethIntro, Route107_Text_BethDefeated
 	msgbox Route107_Text_BethPostBattle, MSGBOX_AUTOCLOSE
 	end
 

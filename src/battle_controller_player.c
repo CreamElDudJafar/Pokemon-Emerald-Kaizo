@@ -1503,6 +1503,23 @@ static void MoveSelectionDisplayMoveType(void)
     *(txtPtr)++ = EXT_CTRL_CODE_FONT;
     *(txtPtr)++ = FONT_NORMAL;
 
+    #ifdef SHOW_HIDDEN_POWER
+    if (moveInfo->moves[gMoveSelectionCursor[gActiveBattler]] == MOVE_HIDDEN_POWER)
+    {
+        u8 typeBits  = ((gBattleMons[gActiveBattler].hpIV & 1) << 0)
+                     | ((gBattleMons[gActiveBattler].attackIV & 1) << 1)
+                     | ((gBattleMons[gActiveBattler].defenseIV & 1) << 2)
+                     | ((gBattleMons[gActiveBattler].speedIV & 1) << 3)
+                     | ((gBattleMons[gActiveBattler].spAttackIV & 1) << 4)
+                     | ((gBattleMons[gActiveBattler].spDefenseIV & 1) << 5);
+        u8 type = ((NUMBER_OF_MON_TYPES - 3) * typeBits) / 63 + 1;
+        if (type >= TYPE_MYSTERY) type++;
+        type |= F_DYNAMIC_TYPE_IGNORE_PHYSICALITY | F_DYNAMIC_TYPE_SET;
+        type &= 0x3F;
+        StringCopy(txtPtr, gTypeNames[type]);
+    }
+    else
+    #endif
     StringCopy(txtPtr, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type]);
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
 }
@@ -2329,7 +2346,11 @@ static void PlayerHandleDrawTrainerPic(void)
         gSprites[gBattlerSpriteIds[gActiveBattler]].oam.paletteNum = IndexOfSpritePaletteTag(gTrainerFrontPicPaletteTable[trainerPicId].tag);
         gSprites[gBattlerSpriteIds[gActiveBattler]].x2 = DISPLAY_WIDTH;
         gSprites[gBattlerSpriteIds[gActiveBattler]].y2 = 48;
+        #ifdef FASTER_BATTLE_ANIMS
+        gSprites[gBattlerSpriteIds[gActiveBattler]].sSpeedX = -4;
+        #else
         gSprites[gBattlerSpriteIds[gActiveBattler]].sSpeedX = -2;
+        #endif
         gSprites[gBattlerSpriteIds[gActiveBattler]].callback = SpriteCB_TrainerSlideIn;
         gSprites[gBattlerSpriteIds[gActiveBattler]].oam.affineMode = ST_OAM_AFFINE_OFF;
         gSprites[gBattlerSpriteIds[gActiveBattler]].hFlip = 1;
@@ -2343,7 +2364,11 @@ static void PlayerHandleDrawTrainerPic(void)
 
         gSprites[gBattlerSpriteIds[gActiveBattler]].oam.paletteNum = gActiveBattler;
         gSprites[gBattlerSpriteIds[gActiveBattler]].x2 = DISPLAY_WIDTH;
+        #ifdef FASTER_BATTLE_ANIMS
+        gSprites[gBattlerSpriteIds[gActiveBattler]].sSpeedX = -4;
+        #else
         gSprites[gBattlerSpriteIds[gActiveBattler]].sSpeedX = -2;
+        #endif
         gSprites[gBattlerSpriteIds[gActiveBattler]].callback = SpriteCB_TrainerSlideIn;
     }
 
@@ -2382,7 +2407,11 @@ static void PlayerHandleTrainerSlide(void)
 
     gSprites[gBattlerSpriteIds[gActiveBattler]].oam.paletteNum = gActiveBattler;
     gSprites[gBattlerSpriteIds[gActiveBattler]].x2 = -96;
+    #ifdef FASTER_BATTLE_ANIMS
+    gSprites[gBattlerSpriteIds[gActiveBattler]].sSpeedX = 4;
+    #else
     gSprites[gBattlerSpriteIds[gActiveBattler]].sSpeedX = 2;
+    #endif
     gSprites[gBattlerSpriteIds[gActiveBattler]].callback = SpriteCB_TrainerSlideIn;
 
     gBattlerControllerFuncs[gActiveBattler] = CompleteOnBankSpriteCallbackDummy2;
@@ -2796,7 +2825,22 @@ static void PlayerHandleDMA3Transfer(void)
             | (gBattleBufferA[gActiveBattler][4] << 24);
     u16 sizeArg = gBattleBufferA[gActiveBattler][5] | (gBattleBufferA[gActiveBattler][6] << 8);
 
-    DmaCopyLarge16(3, &gBattleBufferA[gActiveBattler][7], (void *)dstArg, sizeArg, 0x1000);
+    const u8 *src = &gBattleBufferA[gActiveBattler][7];
+    u8 *dst = (u8 *)(dstArg);
+    u32 size = sizeArg;
+
+    while (1)
+    {
+        if (size <= 0x1000)
+        {
+            DmaCopy16(3, src, dst, size);
+            break;
+        }
+        DmaCopy16(3, src, dst, 0x1000);
+        src += 0x1000;
+        dst += 0x1000;
+        size -= 0x1000;
+    }
     PlayerBufferExecCompleted();
 }
 

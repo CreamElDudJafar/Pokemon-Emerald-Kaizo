@@ -312,7 +312,7 @@ RustboroCity_EventScript_StolenGoodsScene::
 
 @ Unused
 RustboroCity_EventScript_ShadyCharacterTookOff::
-	msgbox RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_AquaCharacterTookOffTowardsTunnel, MSGBOX_DEFAULT
 	return
 
 @ Unused
@@ -459,7 +459,7 @@ RustboroCity_EventScript_DevonEmployee1::
 	lock
 	faceplayer
 	goto_if_set FLAG_RECOVERED_DEVON_GOODS, RustboroCity_EventScript_ReturnGoodsSpokeToEmployee
-	msgbox RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_AquaCharacterTookOffTowardsTunnel, MSGBOX_DEFAULT
 	release
 	end
 
@@ -1104,8 +1104,8 @@ RustboroCity_Text_HelpMeIWasRobbed:
 	.string "If I don't…\n"
 	.string "I'm going to be in serious trouble.$"
 
-RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel:
-	.string "That shady character, I think he took\n"
+RustboroCity_Text_AquaCharacterTookOffTowardsTunnel:
+	.string "That AQUA character, I think she took\n"
 	.string "off towards the tunnel over there.$"
 
 RustboroCity_Text_YouGotItThankYou:

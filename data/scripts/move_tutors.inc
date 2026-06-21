@@ -50,29 +50,29 @@ MoveTutor_EventScript_RolloutTaught::
 	release
 	end
 
-VerdanturfTown_PokemonCenter_1F_EventScript_FuryCutterTutor::
+VerdanturfTown_PokemonCenter_1F_EventScript_XScissorsTutor::
 	lock
 	faceplayer
-	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_FURY_CUTTER, MoveTutor_EventScript_FuryCutterTaught
-	msgbox MoveTutor_Text_FuryCutterTeach, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_FuryCutterDeclined
+	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_FURY_CUTTER, MoveTutor_EventScript_XScissorsTaught
+	msgbox MoveTutor_Text_XScissorsTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_XScissorsDeclined
 	call MoveTutor_EventScript_CanOnlyBeLearnedOnce
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_FuryCutterDeclined
-	msgbox MoveTutor_Text_FuryCutterWhichMon, MSGBOX_DEFAULT
-	setvar VAR_0x8005, TUTOR_MOVE_FURY_CUTTER
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_XScissorsDeclined
+	msgbox MoveTutor_Text_XScissorsWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_X_SCISSORS
 	call MoveTutor_EventScript_OpenPartyMenu
-	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_FuryCutterDeclined
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_XScissorsDeclined
 	setflag FLAG_MOVE_TUTOR_TAUGHT_FURY_CUTTER
-	goto MoveTutor_EventScript_FuryCutterTaught
+	goto MoveTutor_EventScript_XScissorsTaught
 	end
 
-MoveTutor_EventScript_FuryCutterDeclined::
-	msgbox MoveTutor_Text_FuryCutterDeclined, MSGBOX_DEFAULT
+MoveTutor_EventScript_XScissorsDeclined::
+	msgbox MoveTutor_Text_XScissorsDeclined, MSGBOX_DEFAULT
 	release
 	end
 
-MoveTutor_EventScript_FuryCutterTaught::
-	msgbox MoveTutor_Text_FuryCutterTaught, MSGBOX_DEFAULT
+MoveTutor_EventScript_XScissorsTaught::
+	msgbox MoveTutor_Text_XScissorsTaught, MSGBOX_DEFAULT
 	release
 	end
 

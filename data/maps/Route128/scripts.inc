@@ -216,14 +216,14 @@ Route128_EventScript_RematchKatelyn::
 	msgbox Route128_Text_KatelynPostRematch, MSGBOX_AUTOCLOSE
 	end
 
-Route128_EventScript_Alexa::
-	trainerbattle_single TRAINER_ALEXA, Route128_Text_AlexaIntro, Route128_Text_AlexaDefeat
-	msgbox Route128_Text_AlexaPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route128_EventScript_Ruben::
 	trainerbattle_single TRAINER_RUBEN, Route128_Text_RubenIntro, Route128_Text_RubenDefeat
 	msgbox Route128_Text_RubenPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route128_EventScript_Alexa::
+	trainerbattle_single TRAINER_ALEXA, Route128_Text_AlexaIntro, Route128_Text_AlexaDefeat
+	msgbox Route128_Text_AlexaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route128_EventScript_Wayne::

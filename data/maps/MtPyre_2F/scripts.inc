@@ -17,9 +17,9 @@ MtPyre_2F_EventScript_PokefanM::
 	msgbox MtPyre_2F_Text_TumbledFromFloorAbove, MSGBOX_NPC
 	end
 
-MtPyre_2F_EventScript_Mark::
-	trainerbattle_single TRAINER_MARK, MtPyre_2F_Text_MarkIntro, MtPyre_2F_Text_MarkDefeat
-	msgbox MtPyre_2F_Text_MarkPostBattle, MSGBOX_AUTOCLOSE
+MtPyre_2F_EventScript_Grunt7::
+	trainerbattle_single TRAINER_GRUNT_MT_PYRE_7, MtPyre_2F_Text_Grunt7Intro, MtPyre_2F_Text_Grunt7Defeat
+	msgbox MtPyre_2F_Text_Grunt7PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtPyre_2F_EventScript_Luke::
@@ -37,9 +37,9 @@ MtPyre_2F_EventScript_Leah::
 	msgbox MtPyre_2F_Text_LeahPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-MtPyre_2F_EventScript_Zander::
-	trainerbattle_single TRAINER_ZANDER, MtPyre_2F_Text_ZanderIntro, MtPyre_2F_Text_ZanderDefeat
-	msgbox MtPyre_2F_Text_ZanderPostBattle, MSGBOX_AUTOCLOSE
+MtPyre_2F_EventScript_Grunt6::
+	trainerbattle_single TRAINER_GRUNT_MT_PYRE_6, MtPyre_2F_Text_Grunt6Intro, MtPyre_2F_Text_Grunt6Defeat
+	msgbox MtPyre_2F_Text_Grunt6PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtPyre_2F_Text_MemoriesOfSkitty:
@@ -52,15 +52,15 @@ MtPyre_2F_Text_TumbledFromFloorAbove:
 	.string "I didn't notice and took a tumble from\n"
 	.string "the floor above.$"
 
-MtPyre_2F_Text_MarkIntro:
+MtPyre_2F_Text_Grunt7Intro:
 	.string "Hey! Are you searching for POKéMON?\n"
 	.string "You came along after me! You're rude!$"
 
-MtPyre_2F_Text_MarkDefeat:
+MtPyre_2F_Text_Grunt7Defeat:
 	.string "Ayieeeeh!\n"
 	.string "I'm sorry, forgive me, please!$"
 
-MtPyre_2F_Text_MarkPostBattle:
+MtPyre_2F_Text_Grunt7PostBattle:
 	.string "People don't come here often, so\n"
 	.string "I thought there'd be rare POKéMON.$"
 
@@ -120,15 +120,15 @@ MtPyre_2F_Text_LeahPostBattle:
 	.string "It is my duty to protect this\n"
 	.string "mountain…$"
 
-MtPyre_2F_Text_ZanderIntro:
+MtPyre_2F_Text_Grunt6Intro:
 	.string "Kiyaaaaah!\n"
 	.string "I'm terrified!$"
 
-MtPyre_2F_Text_ZanderDefeat:
+MtPyre_2F_Text_Grunt6Defeat:
 	.string "Nooooooo!\n"
 	.string "I lost my wits!$"
 
-MtPyre_2F_Text_ZanderPostBattle:
+MtPyre_2F_Text_Grunt6PostBattle:
 	.string "I get freaked out every time I see\n"
 	.string "anything move…\p"
 	.string "I shouldn't have come here to train…$"

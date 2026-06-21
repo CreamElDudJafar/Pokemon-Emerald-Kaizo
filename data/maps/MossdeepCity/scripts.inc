@@ -221,25 +221,25 @@ MossdeepCity_EventScript_Man::
 	release
 	end
 
-MossdeepCity_EventScript_KingsRockBoy::
+MossdeepCity_EventScript_EverstoneBoy::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_KINGS_ROCK, MossdeepCity_EventScript_ReceivedKingsRock
-	msgbox MossdeepCity_Text_WantKingsRockStevenGaveMe, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MossdeepCity_EventScript_DeclineKingsRock
+	goto_if_set FLAG_RECEIVED_EVERSTONE, MossdeepCity_EventScript_ReceivedEverstone
+	msgbox MossdeepCity_Text_WantEverstoneStevenGaveMe, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MossdeepCity_EventScript_DeclineEverstone
 	msgbox MossdeepCity_Text_YouCanKeepIt, MSGBOX_DEFAULT
-	giveitem ITEM_KINGS_ROCK
+	giveitem ITEM_EVERSTONE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_KINGS_ROCK
+	setflag FLAG_RECEIVED_EVERSTONE
 	release
 	end
 
-MossdeepCity_EventScript_ReceivedKingsRock::
+MossdeepCity_EventScript_ReceivedEverstone::
 	msgbox MossdeepCity_Text_StevensHouseOverThere, MSGBOX_DEFAULT
 	release
 	end
 
-MossdeepCity_EventScript_DeclineKingsRock::
+MossdeepCity_EventScript_DeclineEverstone::
 	msgbox MossdeepCity_Text_WhatToDoWithWeirdRock, MSGBOX_DEFAULT
 	release
 	end
@@ -303,10 +303,10 @@ MossdeepCity_Movement_ScottExitEast:
 	walk_left
 	step_end
 
-MossdeepCity_Text_WantKingsRockStevenGaveMe:
+MossdeepCity_Text_WantEverstoneStevenGaveMe:
 	.string "I got this from STEVEN, but I don't\n"
 	.string "know what it's good for.\p"
-	.string "I think it's called KING'S ROCK.\n"
+	.string "I think it's called EVERSTONE.\n"
 	.string "Do you want it?$"
 
 MossdeepCity_Text_YouCanKeepIt:

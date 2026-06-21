@@ -58,8 +58,8 @@ Route110_EventScript_ItemElixir::
 	finditem ITEM_ELIXIR
 	end
 
-Route111_EventScript_ItemTMSandstorm::
-	finditem ITEM_TM_SANDSTORM
+Route111_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
 	end
 
 Route111_EventScript_ItemStardust::
@@ -90,8 +90,8 @@ Route113_EventScript_ItemHyperPotion::
 	finditem ITEM_HYPER_POTION
 	end
 
-Route114_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+Route114_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
 	end
 
 Route114_EventScript_ItemProtein::
@@ -158,36 +158,36 @@ Route118_EventScript_ItemHyperPotion::
 	finditem ITEM_HYPER_POTION
 	end
 
-Route119_EventScript_ItemSuperRepel::
-	finditem ITEM_SUPER_REPEL
+Route119_EventScript_ItemLuckyEgg::
+	finditem ITEM_LUCKY_EGG
 	end
 
-Route119_EventScript_ItemZinc::
-	finditem ITEM_ZINC
+Route119_EventScript_ItemLuckyEgg2::
+	finditem ITEM_LUCKY_EGG
 	end
 
-Route119_EventScript_ItemElixir::
-	finditem ITEM_ELIXIR
+Route119_EventScript_ItemLuckyEgg3::
+	finditem ITEM_LUCKY_EGG
 	end
 
-Route119_EventScript_ItemLeafStone::
-	finditem ITEM_LEAF_STONE
+Route119_EventScript_ItemLuckyEgg4::
+	finditem ITEM_LUCKY_EGG
 	end
 
 Route119_EventScript_ItemRareCandy::
 	finditem ITEM_RARE_CANDY
 	end
 
-Route119_EventScript_ItemHyperPotion::
-	finditem ITEM_HYPER_POTION
+Route119_EventScript_ItemLuckyEgg5::
+	finditem ITEM_LUCKY_EGG
 	end
 
-Route119_EventScript_ItemHyperPotion2::
-	finditem ITEM_HYPER_POTION
+Route119_EventScript_ItemLuckyEgg6::
+	finditem ITEM_LUCKY_EGG
 	end
 
-Route119_EventScript_ItemElixir2::
-	finditem ITEM_ELIXIR
+Route119_EventScript_ItemLuckyEgg7::
+	finditem ITEM_LUCKY_EGG
 	end
 
 Route120_EventScript_ItemNugget::
@@ -390,8 +390,8 @@ MeteorFalls_1F_1R_EventScript_ItemMoonStone::
 	finditem ITEM_MOON_STONE
 	end
 
-MeteorFalls_1F_1R_EventScript_ItemPPUP::
-	finditem ITEM_PP_UP
+MeteorFalls_1F_1R_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
 	end
 
 MeteorFalls_B1F_2R_EventScript_ItemTMDragonClaw::
@@ -418,8 +418,8 @@ NewMauville_Inside_EventScript_ItemParalyzeHeal::
 	finditem ITEM_PARALYZE_HEAL
 	end
 
-AbandonedShip_Rooms_1F_EventScript_ItemHarborMail::
-	finditem ITEM_HARBOR_MAIL
+AbandonedShip_Rooms_1F_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
 	end
 
 AbandonedShip_Rooms_B1F_EventScript_ItemEscapeRope::
@@ -430,40 +430,40 @@ AbandonedShip_Rooms2_B1F_EventScript_ItemDiveBall::
 	finditem ITEM_DIVE_BALL
 	end
 
-AbandonedShip_Room_B1F_EventScript_ItemTMIceBeam::
-	finditem ITEM_TM_ICE_BEAM
+AbandonedShip_Room_B1F_EventScript_ItemScanner::
+	finditem ITEM_SCANNER
 	end
 
 AbandonedShip_Rooms2_1F_EventScript_ItemRevive::
 	finditem ITEM_REVIVE
 	end
 
-AbandonedShip_CaptainsOffice_EventScript_ItemStorageKey::
-	finditem ITEM_STORAGE_KEY
+AbandonedShip_CaptainsOffice_EventScript_ItemRoom1Key::
+	finditem ITEM_ROOM_1_KEY
 	end
 
-AbandonedShip_HiddenFloorRooms_EventScript_ItemLuxuryBall::
-	finditem ITEM_LUXURY_BALL
+AbandonedShip_HiddenFloorRooms_EventScript_ItemTMIceBeam::
+	finditem ITEM_TM_ICE_BEAM
 	end
 
-AbandonedShip_HiddenFloorRooms_EventScript_ItemScanner::
-	finditem ITEM_SCANNER
+AbandonedShip_HiddenFloorRooms_EventScript_ItemOldSeaMap::
+	finditem ITEM_OLD_SEA_MAP
 	end
 
-AbandonedShip_HiddenFloorRooms_EventScript_ItemWaterStone::
-	finditem ITEM_WATER_STONE
+AbandonedShip_HiddenFloorRooms_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
 	end
 
-AbandonedShip_HiddenFloorRooms_EventScript_ItemTMRainDance::
-	finditem ITEM_TM_RAIN_DANCE
+AbandonedShip_HiddenFloorRooms_EventScript_ItemTMIceBeam2::
+	finditem ITEM_TM_ICE_BEAM
 	end
 
-ScorchedSlab_EventScript_ItemTMSunnyDay::
-	finditem ITEM_TM_SUNNY_DAY
+ScorchedSlab_EventScript_ItemMysticTicket::
+	finditem ITEM_MYSTIC_TICKET
 	end
 
-SafariZone_Northwest_EventScript_ItemTMSolarBeam::
-	finditem ITEM_TM_SOLAR_BEAM
+SafariZone_Northwest_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
 	end
 
 SafariZone_North_EventScript_ItemCalcium::
@@ -494,8 +494,8 @@ MtPyre_4F_EventScript_ItemSeaIncense::
 	finditem ITEM_SEA_INCENSE
 	end
 
-MtPyre_5F_EventScript_ItemLaxIncense::
-	finditem ITEM_LAX_INCENSE
+MtPyre_5F_EventScript_ItemLuckyEgg::
+	finditem ITEM_LUCKY_EGG
 	end
 
 MtPyre_6F_EventScript_ItemTMShadowBall::
@@ -510,12 +510,12 @@ MtPyre_Exterior_EventScript_ItemTMSkillSwap::
 	finditem ITEM_TM_SKILL_SWAP
 	end
 
-AquaHideout_B1F_EventScript_ItemMasterBall::
-	finditem ITEM_MASTER_BALL
+AquaHideout_B1F_EventScript_ItemDiveBall::
+	finditem ITEM_DIVE_BALL
 	end
 
 AquaHideout_B1F_EventScript_ItemNugget::
-	finditem ITEM_NUGGET
+	finditem ITEM_NUGGET 4
 	end
 
 AquaHideout_B1F_EventScript_ItemMaxElixir::
@@ -554,8 +554,8 @@ ShoalCave_LowTideStairsRoom_EventScript_ItemIceHeal::
 	finditem ITEM_ICE_HEAL
 	end
 
-ShoalCave_LowTideIceRoom_EventScript_ItemTMHail::
-	finditem ITEM_TM_HAIL
+ShoalCave_LowTideIceRoom_EventScript_ItemRareCandy::
+	finditem ITEM_RARE_CANDY
 	end
 
 ShoalCave_LowTideIceRoom_EventScript_ItemNeverMeltIce::
@@ -566,28 +566,28 @@ SeafloorCavern_Room9_EventScript_ItemTMEarthquake::
 	finditem ITEM_TM_EARTHQUAKE
 	end
 
-Route110_TrickHousePuzzle1_EventScript_ItemOrangeMail::
-	finditem ITEM_ORANGE_MAIL
+Route110_TrickHousePuzzle1_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
 	end
 
-Route110_TrickHousePuzzle2_EventScript_ItemHarborMail::
-	finditem ITEM_HARBOR_MAIL
+Route110_TrickHousePuzzle2_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
 	end
 
-Route110_TrickHousePuzzle2_EventScript_ItemWaveMail::
-	finditem ITEM_WAVE_MAIL
+Route110_TrickHousePuzzle2_EventScript_ItemTMEarthquake::
+	finditem ITEM_TM_EARTHQUAKE
 	end
 
-Route110_TrickHousePuzzle3_EventScript_ItemShadowMail::
-	finditem ITEM_SHADOW_MAIL
+Route110_TrickHousePuzzle3_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
 	end
 
-Route110_TrickHousePuzzle3_EventScript_ItemWoodMail::
-	finditem ITEM_WOOD_MAIL
+Route110_TrickHousePuzzle3_EventScript_ItemTMPsychic::
+	finditem ITEM_TM_PSYCHIC
 	end
 
-Route110_TrickHousePuzzle4_EventScript_ItemMechMail::
-	finditem ITEM_MECH_MAIL
+Route110_TrickHousePuzzle4_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
 	end
 
 Route110_TrickHousePuzzle6_EventScript_ItemGlitterMail::
@@ -598,8 +598,8 @@ Route110_TrickHousePuzzle7_EventScript_ItemTropicMail::
 	finditem ITEM_TROPIC_MAIL
 	end
 
-Route110_TrickHousePuzzle8_EventScript_ItemBeadMail::
-	finditem ITEM_BEAD_MAIL
+Route110_TrickHousePuzzle8_EventScript_ItemTMDracoMeteor::
+	finditem ITEM_TM_DRACO_METEOR
 	end
 
 VictoryRoad_1F_EventScript_ItemMaxElixir::
@@ -622,12 +622,12 @@ VictoryRoad_B2F_EventScript_ItemFullHeal::
 	finditem ITEM_FULL_HEAL
 	end
 
-ArtisanCave_B1F_EventScript_ItemHPUp::
-	finditem ITEM_HP_UP
+ArtisanCave_B1F_EventScript_ItemEonTicket::
+	finditem ITEM_EON_TICKET
 	end
 
-ArtisanCave_1F_EventScript_ItemCarbos::
-	finditem ITEM_CARBOS
+ArtisanCave_1F_EventScript_ItemAuroraTicket::
+	finditem ITEM_AURORA_TICKET
 	end
 
 MagmaHideout_1F_EventScript_ItemRareCandy::

@@ -46,9 +46,9 @@ Route113_EventScript_TrainerTipsRegisterKeyItems::
 	msgbox Route113_Text_TrainerTipsRegisterKeyItems, MSGBOX_SIGN
 	end
 
-Route113_EventScript_Jaylen::
-	trainerbattle_single TRAINER_JAYLEN, Route113_Text_JaylenIntro, Route113_Text_JaylenDefeat
-	msgbox Route113_Text_JaylenPostBattle, MSGBOX_AUTOCLOSE
+Route113_EventScript_Red::
+	trainerbattle_single TRAINER_RED_ROUTE_113, Route113_Text_RedIntro, Route113_Text_RedDefeat
+	msgbox Route113_Text_RedPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route113_EventScript_Dillon::

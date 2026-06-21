@@ -1,9 +1,17 @@
 enum
 {
+    #if defined(UPDATE1_1) || defined(AESTHETICS)
+    PAGE_KAIZO_TITLE,
+    PAGE_DEVELOPER,
+    #endif
     PAGE_TITLE,
     PAGE_DIRECTOR,
+    #if defined(UPDATE1_1) || defined(AESTHETICS)
+    PAGE_ART_WORLD_DIRECTOR,
+    #else
     PAGE_ART_DIRECTOR,
     PAGE_WORLD_DIRECTOR,
+    #endif
     PAGE_LEAD_PROGRAMMER,
     PAGE_PROGRAMMERS_1,
     PAGE_PROGRAMMERS_2,
@@ -30,7 +38,9 @@ enum
     PAGE_PKMN_DESIGNERS_3,
     PAGE_PKMN_DESIGNERS_4,
     PAGE_SUPPORT_PROGRAMMERS,
+    #if !defined(UPDATE1_1) && !defined(AESTHETICS)
     PAGE_NCL_PRODUCT_TESTING,
+    #endif
     PAGE_PACKAGE_AND_MANUAL,
     PAGE_SPECIAL_THANKS_1,
     PAGE_SPECIAL_THANKS_2,
@@ -221,6 +231,9 @@ static const u8 sCreditsText_MotoyasuTojima[]                 = _("Motoyasu Toji
 static const u8 sCreditsText_NicolaPrattBarlow[]              = _("Nicola Pratt-Barlow");
 static const u8 sCreditsText_ShellieDow[]                     = _("Shellie Dow");
 static const u8 sCreditsText_ErikJohnson[]                    = _("Erik Johnson");
+static const u8 sCreditsText_PkmnEmeraldKaizo[]               = _("POKéMON EMERALD KAIZO");
+static const u8 sCreditsText_Developer[]                      = _("Developer");
+static const u8 sCreditsText_SinisterHoodedFigure[]           = _("SinisterHoodedFigure");
 static const struct CreditsEntry sCreditsEntry_EmptyString                      = { 0, FALSE, sCreditsText_EmptyString};
 static const struct CreditsEntry sCreditsEntry_PkmnEmeraldVersion               = { 7,  TRUE, sCreditsText_PkmnEmeraldVersion};
 static const struct CreditsEntry sCreditsEntry_Credits                          = {11,  TRUE, sCreditsText_Credits};
@@ -380,10 +393,29 @@ static const struct CreditsEntry sCreditsEntry_MotoyasuTojima                   
 static const struct CreditsEntry sCreditsEntry_NicolaPrattBarlow                = { 0, FALSE, sCreditsText_NicolaPrattBarlow};
 static const struct CreditsEntry sCreditsEntry_ShellieDow                       = { 0, FALSE, sCreditsText_ShellieDow};
 static const struct CreditsEntry sCreditsEntry_ErikJohnson                      = { 0, FALSE, sCreditsText_ErikJohnson};
+static const struct CreditsEntry sCreditsEntry_PkmnEmeraldKaizo                 = { 7,  TRUE, sCreditsText_PkmnEmeraldKaizo};
+static const struct CreditsEntry sCreditsEntry_Developer                        = { 8,  TRUE, sCreditsText_Developer};
+static const struct CreditsEntry sCreditsEntry_SinisterHoodedFigure             = {11, FALSE, sCreditsText_SinisterHoodedFigure};
 
 #define _ &sCreditsEntry_EmptyString
 static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][ENTRIES_PER_PAGE] =
 {
+    #if defined(UPDATE1_1) || defined(AESTHETICS)
+    [PAGE_KAIZO_TITLE] = {
+        _,
+        &sCreditsEntry_PkmnEmeraldKaizo,
+        &sCreditsEntry_Credits,
+        _,
+        _
+    },
+    [PAGE_DEVELOPER] = {
+        _,
+        &sCreditsEntry_Developer,
+        &sCreditsEntry_SinisterHoodedFigure,
+        _,
+        _,
+    },
+    #endif
     [PAGE_TITLE] = {
         _,
         &sCreditsEntry_PkmnEmeraldVersion,
@@ -398,6 +430,15 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         _,
         _,
     },
+    #if defined(UPDATE1_1) || defined(AESTHETICS)
+    [PAGE_ART_WORLD_DIRECTOR] = {
+        &sCreditsEntry_ArtDirector,
+        &sCreditsEntry_KenSugimori,
+        &sCreditsEntry_WorldDirector,
+        &sCreditsEntry_JunichiMasuda,
+        _,
+    },
+    #else
     [PAGE_ART_DIRECTOR] = {
         _,
         &sCreditsEntry_ArtDirector,
@@ -412,6 +453,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         _,
         _,
     },
+    #endif
     [PAGE_LEAD_PROGRAMMER] = {
         &sCreditsEntry_LeadProgrammer,
         &sCreditsEntry_HisashiSogabe,
@@ -594,6 +636,15 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_DaisukeHoshino,
         _,
     },
+    #if defined(UPDATE1_1) || defined(AESTHETICS)
+    [PAGE_PACKAGE_AND_MANUAL] = {
+        _,
+        &sCreditsEntry_PackageAndManual,
+        &sCreditsEntry_KenSugimori,
+        &sCreditsEntry_NCLProductTesting,
+        &sCreditsEntry_NCLSuperMarioClub,
+    },
+    #else
     [PAGE_NCL_PRODUCT_TESTING] = {
         _,
         &sCreditsEntry_NCLProductTesting,
@@ -608,6 +659,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         _,
         _,
     },
+    #endif
     [PAGE_SPECIAL_THANKS_1] = {
         _,
         &sCreditsEntry_SpecialThanks,

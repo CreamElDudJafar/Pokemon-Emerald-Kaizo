@@ -1153,9 +1153,8 @@ static const u8 sTM07Desc[] = _(
     "types except ICE.");
 
 static const u8 sTM08Desc[] = _(
-    "Bulks up the body\n"
-    "to boost both\n"
-    "ATTACK & DEFENSE.");
+    "Damage is equal\n"
+    "to user's level.              ");
 
 static const u8 sTM09Desc[] = _(
     "Shoots 2 to 5 seeds\n"
@@ -1273,9 +1272,8 @@ static const u8 sTM31Desc[] = _(
     "and causes damage.");
 
 static const u8 sTM32Desc[] = _(
-    "Creates illusory\n"
-    "copies to enhance\n"
-    "elusiveness.");
+    "Deals damage\n"
+    "and does recoil.                    ");
 
 static const u8 sTM33Desc[] = _(
     "Creates a wall of\n"
@@ -1364,8 +1362,7 @@ static const u8 sTM49Desc[] = _(
 
 static const u8 sTM50Desc[] = _(
     "Enables full-power\n"
-    "attack, but sharply\n"
-    "lowers SP. ATK.");
+    "attack, but does\nrecoil.           ");
 
 
 static const u8 sHM01Desc[] = _(

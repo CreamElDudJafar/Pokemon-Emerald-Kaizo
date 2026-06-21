@@ -19,7 +19,7 @@
       "x": 6,
       "y": 3,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -41,17 +41,17 @@
       "flag": "FLAG_ITEM_MT_PYRE_6F_TM_SHADOW_BALL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
-      "x": 10,
-      "y": 3,
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 3,
+      "y": 2,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "MtPyre_6F_EventScript_Cedric",
-      "flag": "0"
+      "script": "MtPyre_6F_EventScript_Grunt4",
+      "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA"
     }
   ],
   "warp_events": [

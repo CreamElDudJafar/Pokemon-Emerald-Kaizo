@@ -243,6 +243,7 @@ const u8 gText_BootedUpTM[] = _("Booted up a TM.");
 const u8 gText_BootedUpHM[] = _("Booted up an HM.");
 const u8 gText_TMHMContainedVar1[] = _("It contained\n{STR_VAR_1}.\pTeach {STR_VAR_1}\nto a POKéMON?");
 const u8 gText_PlayerUsedVar2[] = _("{PLAYER} used the\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}");
+const u8 gText_PlayerUsedVar2NoPause[] = _("{PLAYER} used the\n{STR_VAR_2}.");
 const u8 gText_RepelEffectsLingered[] = _("But the effects of a REPEL\nlingered from earlier.{PAUSE_UNTIL_PRESS}");
 const u8 gText_UsedVar2WildLured[] = _("{PLAYER} used the\n{STR_VAR_2}.\pWild POKéMON will be lured.{PAUSE_UNTIL_PRESS}");
 const u8 gText_UsedVar2WildRepelled[] = _("{PLAYER} used the\n{STR_VAR_2}.\pWild POKéMON will be repelled.{PAUSE_UNTIL_PRESS}");
@@ -483,11 +484,19 @@ ALIGNED(4) const u8 gText_CantTradeWithTrainer[] = _("You can't trade with that\
 ALIGNED(4) const u8 gText_NotPkmnOtherTrainerWants[] = _("That isn't the type of POKéMON\nthat the other TRAINER wants.");
 ALIGNED(4) const u8 gText_ThatIsntAnEgg[] = _("That isn't an EGG.");
 const u8 gText_Register[] = _("REGISTER");
+#ifdef SUMMARY_SCREEN_IVS
+const u8 gText_Attack3[] = _("ATK");
+const u8 gText_Defense3[] = _("DEF");
+const u8 gText_SpAtk4[] = _("SP.A");
+const u8 gText_SpDef4[] = _("SP.D");
+const u8 gText_Speed2[] = _("SPE");
+#else
 const u8 gText_Attack3[] = _("ATTACK");
 const u8 gText_Defense3[] = _("DEFENSE");
 const u8 gText_SpAtk4[] = _("SP. ATK");
 const u8 gText_SpDef4[] = _("SP. DEF");
 const u8 gText_Speed2[] = _("SPEED");
+#endif
 const u8 gText_HP4[] = _("HP");
 const u8 gText_EmptyString8[] = _(""); // Unused
 const u8 gText_OTSlash[] = _("OT/");
@@ -668,8 +677,14 @@ const u8 gText_GlassDesk[] = _("GLASS DESK");
 const u8 gText_TreeckoDollAndPrice[] = _("TREECKO DOLL 1,000 COINS");
 const u8 gText_TorchicDollAndPrice[] = _("TORCHIC DOLL 1,000 COINS");
 const u8 gText_MudkipDollAndPrice[] = _("MUDKIP DOLL   1,000 COINS");
+
+#ifdef TMS_AND_COINS
+const u8 gText_50CoinsAndPrice[] = _("  50 COINS           ¥1");
+const u8 gText_500CoinsAndPrice[] = _("500 COINS           ¥1");
+#else
 const u8 gText_50CoinsAndPrice[] = _("  50 COINS    ¥1,000");
 const u8 gText_500CoinsAndPrice[] = _("500 COINS  ¥10,000");
+#endif
 const u8 gText_Excellent2[] = _("Excellent");
 const u8 gText_NotSoGood[] = _("Not so good");
 const u8 gText_RedShard[] = _("RED SHARD");
@@ -679,11 +694,31 @@ const u8 gText_GreenShard[] = _("GREEN SHARD");
 const u8 gText_BattleFrontier[] = _("BATTLE FRONTIER");
 const u8 gText_Right[] = _("Right");
 const u8 gText_Left[] = _("Left");
-const u8 gText_TM32AndPrice[] = _("TM32{CLEAR_TO 72}1,500 COINS");
+#if defined(BUG_FIXES) && defined(TMS_AND_COINS)
+const u8 gText_TM31AndPrice[] = _("TM31{CLEAR_TO 72}         1 COIN");
+const u8 gText_TM29AndPrice[] = _("TM29{CLEAR_TO 72}         1 COIN");
+const u8 gText_TM35AndPrice[] = _("TM35{CLEAR_TO 72}         1 COIN");
+const u8 gText_TM30AndPrice[] = _("TM30{CLEAR_TO 72}         1 COIN");
+const u8 gText_TM13AndPrice[] = _("TM13{CLEAR_TO 72}         1 COIN");
+#elif defined(BUG_FIXES)
+const u8 gText_TM31AndPrice[] = _("TM31{CLEAR_TO 72}1,500 COINS");
 const u8 gText_TM29AndPrice[] = _("TM29{CLEAR_TO 72}3,500 COINS");
 const u8 gText_TM35AndPrice[] = _("TM35{CLEAR_TO 72}4,000 COINS");
-const u8 gText_TM24AndPrice[] = _("TM24{CLEAR_TO 72}4,000 COINS");
+const u8 gText_TM30AndPrice[] = _("TM30{CLEAR_TO 72}4,000 COINS");
 const u8 gText_TM13AndPrice[] = _("TM13{CLEAR_TO 72}4,000 COINS");
+#elif defined(TMS_AND_COINS)
+const u8 gText_TM31AndPrice[] = _("TM32{CLEAR_TO72}         1 COIN");
+const u8 gText_TM29AndPrice[] = _("TM29{CLEAR_TO72}         1 COIN");
+const u8 gText_TM35AndPrice[] = _("TM35{CLEAR_TO72}         1 COIN");
+const u8 gText_TM30AndPrice[] = _("TM24{CLEAR_TO72}         1 COIN");
+const u8 gText_TM13AndPrice[] = _("TM13{CLEAR_TO72}         1 COIN");
+#else
+const u8 gText_TM31AndPrice[] = _("TM32{CLEAR_TO 72}1,500 COINS");
+const u8 gText_TM29AndPrice[] = _("TM29{CLEAR_TO 72}3,500 COINS");
+const u8 gText_TM35AndPrice[] = _("TM35{CLEAR_TO 72}4,000 COINS");
+const u8 gText_TM30AndPrice[] = _("TM24{CLEAR_TO 72}4,000 COINS");
+const u8 gText_TM13AndPrice[] = _("TM13{CLEAR_TO 72}4,000 COINS");
+#endif
 const u8 gText_Cool[] = _("COOL");
 const u8 gText_Beauty[] = _("BEAUTY");
 const u8 gText_Cute[] = _("CUTE");

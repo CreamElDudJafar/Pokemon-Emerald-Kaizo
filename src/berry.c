@@ -119,8 +119,13 @@ const struct Berry gBerries[] =
         .name = _("CHERI"),
         .firmness = BERRY_FIRMNESS_SOFT,
         .size = 20,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Cheri,
         .description2 = sBerryDescriptionPart2_Cheri,
         .stageDuration = 3,
@@ -137,8 +142,13 @@ const struct Berry gBerries[] =
         .name = _("CHESTO"),
         .firmness = BERRY_FIRMNESS_SUPER_HARD,
         .size = 80,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Chesto,
         .description2 = sBerryDescriptionPart2_Chesto,
         .stageDuration = 3,
@@ -155,8 +165,13 @@ const struct Berry gBerries[] =
         .name = _("PECHA"),
         .firmness = BERRY_FIRMNESS_VERY_SOFT,
         .size = 40,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Pecha,
         .description2 = sBerryDescriptionPart2_Pecha,
         .stageDuration = 3,
@@ -173,8 +188,13 @@ const struct Berry gBerries[] =
         .name = _("RAWST"),
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 32,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Rawst,
         .description2 = sBerryDescriptionPart2_Rawst,
         .stageDuration = 3,
@@ -191,8 +211,13 @@ const struct Berry gBerries[] =
         .name = _("ASPEAR"),
         .firmness = BERRY_FIRMNESS_SUPER_HARD,
         .size = 50,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Aspear,
         .description2 = sBerryDescriptionPart2_Aspear,
         .stageDuration = 3,
@@ -209,8 +234,13 @@ const struct Berry gBerries[] =
         .name = _("LEPPA"),
         .firmness = BERRY_FIRMNESS_VERY_HARD,
         .size = 28,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Leppa,
         .description2 = sBerryDescriptionPart2_Leppa,
         .stageDuration = 4,
@@ -227,8 +257,13 @@ const struct Berry gBerries[] =
         .name = _("ORAN"),
         .firmness = BERRY_FIRMNESS_SUPER_HARD,
         .size = 35,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Oran,
         .description2 = sBerryDescriptionPart2_Oran,
         .stageDuration = 3,
@@ -245,8 +280,13 @@ const struct Berry gBerries[] =
         .name = _("PERSIM"),
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 47,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Persim,
         .description2 = sBerryDescriptionPart2_Persim,
         .stageDuration = 3,
@@ -281,8 +321,13 @@ const struct Berry gBerries[] =
         .name = _("SITRUS"),
         .firmness = BERRY_FIRMNESS_VERY_HARD,
         .size = 95,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Sitrus,
         .description2 = sBerryDescriptionPart2_Sitrus,
         .stageDuration = 6,
@@ -299,8 +344,13 @@ const struct Berry gBerries[] =
         .name = _("FIGY"),
         .firmness = BERRY_FIRMNESS_SOFT,
         .size = 100,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Figy,
         .description2 = sBerryDescriptionPart2_Figy,
         .stageDuration = 6,
@@ -317,8 +367,13 @@ const struct Berry gBerries[] =
         .name = _("WIKI"),
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 115,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Wiki,
         .description2 = sBerryDescriptionPart2_Wiki,
         .stageDuration = 6,
@@ -335,8 +390,13 @@ const struct Berry gBerries[] =
         .name = _("MAGO"),
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 126,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Mago,
         .description2 = sBerryDescriptionPart2_Mago,
         .stageDuration = 6,
@@ -353,8 +413,13 @@ const struct Berry gBerries[] =
         .name = _("AGUAV"),
         .firmness = BERRY_FIRMNESS_SUPER_HARD,
         .size = 64,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Aguav,
         .description2 = sBerryDescriptionPart2_Aguav,
         .stageDuration = 6,
@@ -371,8 +436,13 @@ const struct Berry gBerries[] =
         .name = _("IAPAPA"),
         .firmness = BERRY_FIRMNESS_SOFT,
         .size = 223,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 3,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Iapapa,
         .description2 = sBerryDescriptionPart2_Iapapa,
         .stageDuration = 6,
@@ -389,8 +459,13 @@ const struct Berry gBerries[] =
         .name = _("RAZZ"),
         .firmness = BERRY_FIRMNESS_VERY_HARD,
         .size = 120,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 6,
         .minYield = 3,
+        #endif
         .description1 = sBerryDescriptionPart1_Razz,
         .description2 = sBerryDescriptionPart2_Razz,
         .stageDuration = 1,
@@ -407,8 +482,13 @@ const struct Berry gBerries[] =
         .name = _("BLUK"),
         .firmness = BERRY_FIRMNESS_SOFT,
         .size = 108,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 6,
         .minYield = 3,
+        #endif
         .description1 = sBerryDescriptionPart1_Bluk,
         .description2 = sBerryDescriptionPart2_Bluk,
         .stageDuration = 1,
@@ -425,8 +505,13 @@ const struct Berry gBerries[] =
         .name = _("NANAB"),
         .firmness = BERRY_FIRMNESS_VERY_HARD,
         .size = 77,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 6,
         .minYield = 3,
+        #endif
         .description1 = sBerryDescriptionPart1_Nanab,
         .description2 = sBerryDescriptionPart2_Nanab,
         .stageDuration = 1,
@@ -443,8 +528,13 @@ const struct Berry gBerries[] =
         .name = _("WEPEAR"),
         .firmness = BERRY_FIRMNESS_SUPER_HARD,
         .size = 74,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 6,
         .minYield = 3,
+        #endif
         .description1 = sBerryDescriptionPart1_Wepear,
         .description2 = sBerryDescriptionPart2_Wepear,
         .stageDuration = 1,
@@ -461,8 +551,13 @@ const struct Berry gBerries[] =
         .name = _("PINAP"),
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 80,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 6,
         .minYield = 3,
+        #endif
         .description1 = sBerryDescriptionPart1_Pinap,
         .description2 = sBerryDescriptionPart2_Pinap,
         .stageDuration = 1,
@@ -479,8 +574,13 @@ const struct Berry gBerries[] =
         .name = _("POMEG"),
         .firmness = BERRY_FIRMNESS_VERY_HARD,
         .size = 135,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 6,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Pomeg,
         .description2 = sBerryDescriptionPart2_Pomeg,
         .stageDuration = 3,
@@ -497,8 +597,13 @@ const struct Berry gBerries[] =
         .name = _("KELPSY"),
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 150,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 6,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Kelpsy,
         .description2 = sBerryDescriptionPart2_Kelpsy,
         .stageDuration = 3,
@@ -515,8 +620,13 @@ const struct Berry gBerries[] =
         .name = _("QUALOT"),
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 110,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 6,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Qualot,
         .description2 = sBerryDescriptionPart2_Qualot,
         .stageDuration = 3,
@@ -533,8 +643,13 @@ const struct Berry gBerries[] =
         .name = _("HONDEW"),
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 162,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 6,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Hondew,
         .description2 = sBerryDescriptionPart2_Hondew,
         .stageDuration = 3,
@@ -551,8 +666,13 @@ const struct Berry gBerries[] =
         .name = _("GREPA"),
         .firmness = BERRY_FIRMNESS_SOFT,
         .size = 149,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 6,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Grepa,
         .description2 = sBerryDescriptionPart2_Grepa,
         .stageDuration = 3,
@@ -569,8 +689,13 @@ const struct Berry gBerries[] =
         .name = _("TAMATO"),
         .firmness = BERRY_FIRMNESS_SOFT,
         .size = 200,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 4,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Tamato,
         .description2 = sBerryDescriptionPart2_Tamato,
         .stageDuration = 6,
@@ -587,8 +712,13 @@ const struct Berry gBerries[] =
         .name = _("CORNN"),
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 75,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 4,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Cornn,
         .description2 = sBerryDescriptionPart2_Cornn,
         .stageDuration = 6,
@@ -605,8 +735,13 @@ const struct Berry gBerries[] =
         .name = _("MAGOST"),
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 140,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 4,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Magost,
         .description2 = sBerryDescriptionPart2_Magost,
         .stageDuration = 6,
@@ -623,8 +758,13 @@ const struct Berry gBerries[] =
         .name = _("RABUTA"),
         .firmness = BERRY_FIRMNESS_SOFT,
         .size = 226,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 4,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Rabuta,
         .description2 = sBerryDescriptionPart2_Rabuta,
         .stageDuration = 6,
@@ -641,8 +781,13 @@ const struct Berry gBerries[] =
         .name = _("NOMEL"),
         .firmness = BERRY_FIRMNESS_SUPER_HARD,
         .size = 285,
+        #ifdef MORE_RENEWABLES
+        .maxYield = 255,
+        .minYield = 255,
+        #else
         .maxYield = 4,
         .minYield = 2,
+        #endif
         .description1 = sBerryDescriptionPart1_Nomel,
         .description2 = sBerryDescriptionPart2_Nomel,
         .stageDuration = 6,

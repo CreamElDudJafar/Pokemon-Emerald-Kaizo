@@ -417,7 +417,7 @@ Route111_EventScript_RockSmashTipFatMan::
 	lockall
 	applymovement LOCALID_ROUTE111_ROCK_SMASH_MAN, Common_Movement_FacePlayer
 	waitmovement 0
-	msgbox Route111_Text_MauvilleUncleToldMeToTakeRockSmash, MSGBOX_DEFAULT
+	msgbox Route111_Text_MauvilleBroToldMeToTakeRockSmash, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ROUTE111_ROCK_SMASH_MAN, Common_Movement_FaceOriginalDirection
 	waitmovement 0
@@ -702,13 +702,13 @@ Route111_Text_RootFossilDisappeared:
 	.string "The ROOT FOSSIL disappeared into\n"
 	.string "the sand…$"
 
-Route111_Text_MauvilleUncleToldMeToTakeRockSmash:
+Route111_Text_MauvilleBroToldMeToTakeRockSmash:
 	.string "Oh, no!\p"
-	.string "My uncle in MAUVILLE told me to take\n"
+	.string "My bro in VERDANTURF told me to take\n"
 	.string "ROCK SMASH with me if I was going to\l"
 	.string "ROUTE 111!\p"
-	.string "My uncle? He lives across from\n"
-	.string "the bike shop in MAUVILLE.$"
+	.string "My bro? He lives across from\n"
+	.string "the mart in VERDANTURF.$"
 
 Route111_Text_TrainerHillSign:
 	.string "{RIGHT_ARROW} TRAINER HILL ENTRANCE\p"

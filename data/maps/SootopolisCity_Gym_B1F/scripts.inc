@@ -31,9 +31,9 @@ SootopolisCity_Gym_B1F_EventScript_Olivia::
 	msgbox SootopolisCity_Gym_B1F_Text_OliviaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-SootopolisCity_Gym_B1F_EventScript_Tiffany::
-	trainerbattle_single TRAINER_TIFFANY, SootopolisCity_Gym_B1F_Text_TiffanyIntro, SootopolisCity_Gym_B1F_Text_TiffanyDefeat
-	msgbox SootopolisCity_Gym_B1F_Text_TiffanyPostBattle, MSGBOX_AUTOCLOSE
+SootopolisCity_Gym_1F_EventScript_Wallace::
+	trainerbattle_single TRAINER_WALLACE, SootopolisCity_Gym_1F_Text_WallaceIntro, SootopolisCity_Gym_1F_Text_WallaceDefeat
+	msgbox SootopolisCity_Gym_B1F_Text_WallacePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 SootopolisCity_Gym_B1F_EventScript_Bethany::
@@ -130,19 +130,19 @@ SootopolisCity_Gym_B1F_Text_OliviaPostBattle:
 	.string "I think you have potential.\n"
 	.string "Why don't you stay and train with us?$"
 
-SootopolisCity_Gym_B1F_Text_TiffanyIntro:
-	.string "A graceful glide across the ice while\n"
-	.string "crossing no lines…\p"
-	.string "A TRAINER putting on that performance\n"
-	.string "would be elegantly beautiful!$"
+SootopolisCity_Gym_1F_Text_WallaceIntro:
+	.string "That was superb work, putting an end\n"
+	.string "to that crisis.\p"
+	.string "I wish to see your achievements put\n"
+	.string "to the test against me!$"
 
-SootopolisCity_Gym_B1F_Text_TiffanyDefeat:
-	.string "Well, excuse me?!$"
+SootopolisCity_Gym_1F_Text_WallaceDefeat:
+	.string "Magnificent.$"
 
-SootopolisCity_Gym_B1F_Text_TiffanyPostBattle:
-	.string "This is really obvious, but how strong\n"
-	.string "you are as a TRAINER has nothing to do\l"
-	.string "with how young or old you are.$"
+SootopolisCity_Gym_B1F_Text_WallacePostBattle:
+	.string "Even I felt bedazzled by your\n"
+	.string "masterful performance. Good luck on\l"
+	.string "your upcoming challenges.$"
 
 SootopolisCity_Gym_B1F_Text_BethanyIntro:
 	.string "When I'm with my POKéMON, the time\n"

@@ -50,8 +50,8 @@ gBattleAI_ScriptsTable::
 
 AI_CheckBadMove:
 	if_target_is_ally AI_Ret
-	if_move MOVE_FISSURE, AI_CBM_CheckIfNegatesType
-	if_move MOVE_HORN_DRILL, AI_CBM_CheckIfNegatesType
+	if_move MOVE_EARTH_POWER, AI_CBM_CheckIfNegatesType
+	if_move MOVE_DRILL_RUN, AI_CBM_CheckIfNegatesType
 	get_how_powerful_move_is
 	if_equal MOVE_POWER_OTHER, AI_CheckBadMove_CheckSoundproof
 AI_CBM_CheckIfNegatesType:
@@ -99,7 +99,7 @@ AI_CheckBadMove_CheckSoundproof:
 	if_move MOVE_SCREECH, Score_Minus10
 	if_move MOVE_SNORE, Score_Minus10
 	if_move MOVE_UPROAR, Score_Minus10
-	if_move MOVE_METAL_SOUND, Score_Minus10
+	if_move MOVE_FLASH_CANNON, Score_Minus10
 	if_move MOVE_GRASS_WHISTLE, Score_Minus10
 AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_SLEEP, AI_CBM_Sleep
@@ -863,18 +863,18 @@ AI_CV_MirrorMove_EncouragedMovesToMirror:
 	.2byte MOVE_SMOKESCREEN
 	.2byte MOVE_TOXIC
 	.2byte MOVE_GUILLOTINE
-	.2byte MOVE_HORN_DRILL
-	.2byte MOVE_FISSURE
+	.2byte MOVE_DRILL_RUN
+	.2byte MOVE_EARTH_POWER
 	.2byte MOVE_SHEER_COLD
 	.2byte MOVE_CROSS_CHOP
 	.2byte MOVE_AEROBLAST
 	.2byte MOVE_CONFUSE_RAY
 	.2byte MOVE_SWEET_KISS
 	.2byte MOVE_SCREECH
-	.2byte MOVE_COTTON_SPORE
+	.2byte MOVE_HIDDEN_POWER_ELECTRIC
 	.2byte MOVE_SCARY_FACE
 	.2byte MOVE_FAKE_TEARS
-	.2byte MOVE_METAL_SOUND
+	.2byte MOVE_FLASH_CANNON
 	.2byte MOVE_THUNDER_WAVE
 	.2byte MOVE_GLARE
 	.2byte MOVE_POISON_POWDER
@@ -883,12 +883,12 @@ AI_CV_MirrorMove_EncouragedMovesToMirror:
 	.2byte MOVE_HYPER_BEAM
 	.2byte MOVE_EXTREME_SPEED
 	.2byte MOVE_THIEF
-	.2byte MOVE_COVET
+	.2byte MOVE_HIDDEN_POWER_BUG
 	.2byte MOVE_ATTRACT
 	.2byte MOVE_SWAGGER
 	.2byte MOVE_TORMENT
 	.2byte MOVE_FLATTER
-	.2byte MOVE_TRICK
+	.2byte MOVE_HIDDEN_POWER_FLYING
 	.2byte MOVE_SUPERPOWER
 	.2byte MOVE_SKILL_SWAP
 	.2byte -1

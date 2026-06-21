@@ -10,9 +10,9 @@ Route124_EventScript_HuntersHouseSign::
 	msgbox Route124_Text_HuntersHouse, MSGBOX_SIGN
 	end
 
-Route124_EventScript_Spencer::
-	trainerbattle_single TRAINER_SPENCER, Route124_Text_SpencerIntro, Route124_Text_SpencerDefeat
-	msgbox Route124_Text_SpencerPostBattle, MSGBOX_AUTOCLOSE
+Route124_EventScript_Grunt1::
+	trainerbattle_single TRAINER_GRUNT_ROUTE_124_1, Route124_Text_Grunt1Intro, Route124_Text_Grunt1Defeat
+	msgbox Route124_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route124_EventScript_Roland::
@@ -41,9 +41,9 @@ Route124_EventScript_RematchJenny::
 	msgbox Route124_Text_JennyPostRematch, MSGBOX_AUTOCLOSE
 	end
 
-Route124_EventScript_Grace::
-	trainerbattle_single TRAINER_GRACE, Route124_Text_GraceIntro, Route124_Text_GraceDefeat
-	msgbox Route124_Text_GracePostBattle, MSGBOX_AUTOCLOSE
+Route124_EventScript_Grunt2::
+	trainerbattle_single TRAINER_GRUNT_ROUTE_124_2, Route124_Text_Grunt2Intro, Route124_Text_Grunt2Defeat
+	msgbox Route124_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route124_EventScript_Chad::

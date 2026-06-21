@@ -22,9 +22,9 @@ MtPyre_6F_EventScript_RematchValerie::
 	msgbox MtPyre_6F_Text_ValeriePostRematch, MSGBOX_AUTOCLOSE
 	end
 
-MtPyre_6F_EventScript_Cedric::
-	trainerbattle_single TRAINER_CEDRIC, MtPyre_6F_Text_CedricIntro, MtPyre_6F_Text_CedricDefeat
-	msgbox MtPyre_6F_Text_CedricPostBattle, MSGBOX_AUTOCLOSE
+MtPyre_6F_EventScript_Grunt4::
+	trainerbattle_single TRAINER_GRUNT_MT_PYRE_4, MtPyre_6F_Text_Grunt4Intro, MtPyre_6F_Text_Grunt4Defeat
+	msgbox MtPyre_6F_Text_Grunt4PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtPyre_6F_Text_ValerieIntro:
@@ -55,14 +55,14 @@ MtPyre_6F_Text_ValeriePostRematch:
 	.string "The POKéMON at rest here…\n"
 	.string "Sometimes, they play…$"
 
-MtPyre_6F_Text_CedricIntro:
+MtPyre_6F_Text_Grunt4Intro:
 	.string "Have you lost your bearings?\n"
 	.string "Have no fear for I am here!$"
 
-MtPyre_6F_Text_CedricDefeat:
+MtPyre_6F_Text_Grunt4Defeat:
 	.string "Weren't you lost?$"
 
-MtPyre_6F_Text_CedricPostBattle:
+MtPyre_6F_Text_Grunt4PostBattle:
 	.string "I had this feeling that a lost TRAINER\n"
 	.string "would be panicked and easy to beat.\p"
 	.string "It's dirty and I won't try it again…$"

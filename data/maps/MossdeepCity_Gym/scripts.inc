@@ -52,7 +52,7 @@ MossdeepCity_Gym_EventScript_TateAndLiza::
 	trainerbattle_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaIntro, MossdeepCity_Gym_Text_TateAndLizaDefeat, MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons, MossdeepCity_Gym_EventScript_TateAndLizaDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_TateAndLizaRematch
-	goto_if_unset FLAG_RECEIVED_TM_CALM_MIND, MossdeepCity_Gym_EventScript_GiveCalmMind2
+	goto_if_unset FLAG_RECEIVED_TM_PSYCHIC, MossdeepCity_Gym_EventScript_GivePsychic2
 	msgbox MossdeepCity_Gym_Text_TateAndLizaPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -77,7 +77,7 @@ MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	setvar VAR_MOSSDEEP_CITY_STATE, 1
 	setflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN
 	setvar VAR_MOSSDEEP_SPACE_CENTER_STATE, 1
-	call MossdeepCity_Gym_EventScript_GiveCalmMind
+	call MossdeepCity_Gym_EventScript_GivePsychic
 	closemessage
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
@@ -89,19 +89,19 @@ MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	release
 	end
 
-MossdeepCity_Gym_EventScript_GiveCalmMind2::
-	giveitem ITEM_TM_CALM_MIND
+MossdeepCity_Gym_EventScript_GivePsychic2::
+	giveitem ITEM_TM_PSYCHIC
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	msgbox MossdeepCity_Gym_Text_ExplainCalmMind, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_TM_CALM_MIND
+	msgbox MossdeepCity_Gym_Text_ExplainPsychic, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_TM_PSYCHIC
 	release
 	end
 
-MossdeepCity_Gym_EventScript_GiveCalmMind::
-	giveitem ITEM_TM_CALM_MIND
+MossdeepCity_Gym_EventScript_GivePsychic::
+	giveitem ITEM_TM_PSYCHIC
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
-	msgbox MossdeepCity_Gym_Text_ExplainCalmMind, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_TM_CALM_MIND
+	msgbox MossdeepCity_Gym_Text_ExplainPsychic, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_TM_PSYCHIC
 	return
 
 MossdeepCity_Gym_EventScript_TateAndLizaRematch::
@@ -576,11 +576,11 @@ MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis:
 	.string "DIVE outside of battle.\p"
 	.string "TATE: You should also take this, too.$"
 
-MossdeepCity_Gym_Text_ExplainCalmMind:
-	.string "TATE: That TM04 contains…\n"
-	.string "LIZA: CALM MIND!\p"
-	.string "TATE: It raises SP. ATK and…\n"
-	.string "LIZA: It raises SP. DEF!\p"
+MossdeepCity_Gym_Text_ExplainPsychic:
+	.string "TATE: That TM29 contains…\n"
+	.string "LIZA: PSYCHIC!\p"
+	.string "TATE: It damages and…\n"
+	.string "LIZA: It lowers SP. DEF!\p"
 	.string "TATE: It's a move that's perfect…\n"
 	.string "LIZA: For PSYCHIC POKéMON!\p"
 	.string "… … … … … …$"

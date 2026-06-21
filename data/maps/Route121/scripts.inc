@@ -92,7 +92,7 @@ Route121_EventScript_RematchWalter::
 	end
 
 Route121_EventScript_Tammy::
-	trainerbattle_single TRAINER_TAMMY, Route121_Text_TammyIntro, Route121_Text_TammyDefeat
+	trainerbattle_single TRAINER_TAMMY_ROUTE_121, Route121_Text_TammyIntro, Route121_Text_TammyDefeat
 	msgbox Route121_Text_TammyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -127,9 +127,9 @@ Route121_EventScript_RematchJessica::
 	msgbox Route121_Text_JessicaPostRematch, MSGBOX_AUTOCLOSE
 	end
 
-Route121_EventScript_Cale::
-	trainerbattle_single TRAINER_CALE, Route121_Text_CaleIntro, Route121_Text_CaleDefeat
-	msgbox Route121_Text_CalePostBattle, MSGBOX_AUTOCLOSE
+Route121_EventScript_Ali::
+	trainerbattle_single TRAINER_ALI, Route121_Text_AliIntro, Route121_Text_AliDefeat
+	msgbox Route121_Text_AliPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route121_EventScript_Myles::
@@ -137,9 +137,9 @@ Route121_EventScript_Myles::
 	msgbox Route121_Text_MylesPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route121_EventScript_Pat::
-	trainerbattle_single TRAINER_PAT, Route121_Text_PatIntro, Route121_Text_PatDefeat
-	msgbox Route121_Text_PatPostBattle, MSGBOX_AUTOCLOSE
+Route121_EventScript_Nora::
+	trainerbattle_single TRAINER_NORA, Route121_Text_NoraIntro, Route121_Text_NoraDefeat
+	msgbox Route121_Text_NoraPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route121_EventScript_Marcel::
@@ -159,12 +159,12 @@ Route121_EventScript_RegisterCristin::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route121_Text_CristinRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_CRISTIN_1
+	register_matchcall TRAINER_UNUSED_767
 	release
 	end
 
 Route121_EventScript_RematchCristin::
-	trainerbattle_rematch TRAINER_CRISTIN_1, Route121_Text_CristinRematchIntro, Route121_Text_CristinRematchDefeat
+	trainerbattle_rematch TRAINER_UNUSED_767, Route121_Text_CristinRematchIntro, Route121_Text_CristinRematchDefeat
 	msgbox Route121_Text_CristinPostRematch, MSGBOX_AUTOCLOSE
 	end
 

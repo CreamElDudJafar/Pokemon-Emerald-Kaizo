@@ -1042,7 +1042,11 @@ static void WallyHandleDrawTrainerPic(void)
                                                30);
     gSprites[gBattlerSpriteIds[gActiveBattler]].oam.paletteNum = gActiveBattler;
     gSprites[gBattlerSpriteIds[gActiveBattler]].x2 = DISPLAY_WIDTH;
+    #ifdef FASTER_BATTLE_ANIMS
+    gSprites[gBattlerSpriteIds[gActiveBattler]].sSpeedX = -4;
+    #else
     gSprites[gBattlerSpriteIds[gActiveBattler]].sSpeedX = -2;
+    #endif
     gSprites[gBattlerSpriteIds[gActiveBattler]].callback = SpriteCB_TrainerSlideIn;
     gBattlerControllerFuncs[gActiveBattler] = CompleteOnBattlerSpriteCallbackDummy;
 }
@@ -1057,7 +1061,11 @@ static void WallyHandleTrainerSlide(void)
                                                30);
     gSprites[gBattlerSpriteIds[gActiveBattler]].oam.paletteNum = gActiveBattler;
     gSprites[gBattlerSpriteIds[gActiveBattler]].x2 = -96;
+    #ifdef FASTER_BATTLE_ANIMS
+    gSprites[gBattlerSpriteIds[gActiveBattler]].sSpeedX = 4;
+    #else
     gSprites[gBattlerSpriteIds[gActiveBattler]].sSpeedX = 2;
+    #endif
     gSprites[gBattlerSpriteIds[gActiveBattler]].callback = SpriteCB_TrainerSlideIn;
     gBattlerControllerFuncs[gActiveBattler] = CompleteOnBankSpriteCallbackDummy2;
 }

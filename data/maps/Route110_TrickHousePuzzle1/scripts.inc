@@ -21,14 +21,14 @@ Route110_TrickHousePuzzle1_EventScript_FoundScroll::
 	goto Route110_TrickHousePuzzle_EventScript_FoundScroll
 	end
 
-Route110_TrickHousePuzzle1_EventScript_Sally::
-	trainerbattle_single TRAINER_SALLY, Route110_TrickHousePuzzle1_Text_SallyIntro, Route110_TrickHousePuzzle1_Text_SallyDefeat
-	msgbox Route110_TrickHousePuzzle1_Text_SallyPostBattle, MSGBOX_AUTOCLOSE
+Route110_TrickHousePuzzle1_EventScript_Salieri::
+	trainerbattle_single TRAINER_SALIERI, Route110_TrickHousePuzzle1_Text_SalieriIntro, Route110_TrickHousePuzzle1_Text_SalieriDefeat
+	msgbox Route110_TrickHousePuzzle1_Text_SalieriPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route110_TrickHousePuzzle1_EventScript_Eddie::
-	trainerbattle_single TRAINER_EDDIE, Route110_TrickHousePuzzle1_Text_EddieIntro, Route110_TrickHousePuzzle1_Text_EddieDefeat
-	msgbox Route110_TrickHousePuzzle1_Text_EddiePostBattle, MSGBOX_AUTOCLOSE
+Route110_TrickHousePuzzle1_EventScript_Eduardo::
+	trainerbattle_single TRAINER_EDUARDO, Route110_TrickHousePuzzle1_Text_EduardoIntro, Route110_TrickHousePuzzle1_Text_EduardoDefeat
+	msgbox Route110_TrickHousePuzzle1_Text_EduardoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route110_TrickHousePuzzle1_EventScript_Robin::
@@ -43,25 +43,25 @@ Route110_TrickHousePuzzle1_Text_WroteSecretCodeLockOpened::
 	.string "… … … … … … … …\p"
 	.string "The lock clicked open!$"
 
-Route110_TrickHousePuzzle1_Text_SallyIntro:
+Route110_TrickHousePuzzle1_Text_SalieriIntro:
 	.string "I'll hack and slash my way to victory\n"
 	.string "with the CUT we just learned!$"
 
-Route110_TrickHousePuzzle1_Text_SallyDefeat:
+Route110_TrickHousePuzzle1_Text_SalieriDefeat:
 	.string "Why are you so serious?$"
 
-Route110_TrickHousePuzzle1_Text_SallyPostBattle:
+Route110_TrickHousePuzzle1_Text_SalieriPostBattle:
 	.string "I never get tired of hacking\n"
 	.string "and slashing!$"
 
-Route110_TrickHousePuzzle1_Text_EddieIntro:
+Route110_TrickHousePuzzle1_Text_EduardoIntro:
 	.string "I wandered into this weird house\n"
 	.string "by accident…$"
 
-Route110_TrickHousePuzzle1_Text_EddieDefeat:
+Route110_TrickHousePuzzle1_Text_EduardoDefeat:
 	.string "And now I've lost…$"
 
-Route110_TrickHousePuzzle1_Text_EddiePostBattle:
+Route110_TrickHousePuzzle1_Text_EduardoPostBattle:
 	.string "I lost my way, I lost a battle, and I'm\n"
 	.string "now even more lost… I can't get out…$"
 

@@ -9,7 +9,7 @@
     F(ROAR) \
     F(TOXIC) \
     F(HAIL) \
-    F(BULK_UP) \
+    F(SEISMIC_TOSS) \
     F(BULLET_SEED) \
     F(HIDDEN_POWER) \
     F(SUNNY_DAY) \
@@ -33,7 +33,7 @@
     F(PSYCHIC) \
     F(SHADOW_BALL) \
     F(BRICK_BREAK) \
-    F(DOUBLE_TEAM) \
+    F(DRACO_METEOR) \
     F(REFLECT) \
     F(SHOCK_WAVE) \
     F(FLAMETHROWER) \
@@ -50,7 +50,7 @@
     F(THIEF) \
     F(STEEL_WING) \
     F(SKILL_SWAP) \
-    F(SNATCH) \
+    F(HIDDEN_POWER_FIGHTING) \
     F(OVERHEAT)
 
 #define FOREACH_HM(F) \

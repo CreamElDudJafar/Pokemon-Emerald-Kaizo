@@ -1243,7 +1243,11 @@ static void RecordedOpponentHandleDrawTrainerPic(void)
                                                GetBattlerSpriteSubpriority(gActiveBattler));
 
     gSprites[gBattlerSpriteIds[gActiveBattler]].x2 = -DISPLAY_WIDTH;
+    #ifdef FASTER_BATTLE_ANIMS
+    gSprites[gBattlerSpriteIds[gActiveBattler]].sSpeedX = 4;
+    #else
     gSprites[gBattlerSpriteIds[gActiveBattler]].sSpeedX = 2;
+    #endif
     gSprites[gBattlerSpriteIds[gActiveBattler]].oam.paletteNum = IndexOfSpritePaletteTag(gTrainerFrontPicPaletteTable[trainerPicId].tag);
     gSprites[gBattlerSpriteIds[gActiveBattler]].oam.affineParam = trainerPicId;
     gSprites[gBattlerSpriteIds[gActiveBattler]].callback = SpriteCB_TrainerSlideIn;

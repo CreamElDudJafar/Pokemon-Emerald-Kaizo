@@ -5,7 +5,7 @@
   "music": "MUS_GYM",
   "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
   "requires_flash": false,
-  "weather": "WEATHER_FOG_HORIZONTAL",
+  "weather": "WEATHER_DROUGHT",
   "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
@@ -16,23 +16,23 @@
   "object_events": [
     {
       "local_id": "LOCALID_JACE",
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 4,
-      "y": 18,
+      "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
+      "x": 0,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_BURIED",
-      "trainer_sight_or_berry_tree_id": "1",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "LavaridgeTown_Gym_B1F_EventScript_Jace",
       "flag": "0"
     },
     {
       "local_id": "LOCALID_KEEGAN",
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 3,
-      "y": 6,
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 6,
+      "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -45,14 +45,14 @@
     {
       "local_id": "LOCALID_JEFF",
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 13,
-      "y": 17,
+      "x": 7,
+      "y": 16,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_BURIED",
-      "trainer_sight_or_berry_tree_id": "1",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "LavaridgeTown_Gym_B1F_EventScript_Jeff",
       "flag": "0"
     },
@@ -66,7 +66,7 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_BURIED",
-      "trainer_sight_or_berry_tree_id": "1",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "LavaridgeTown_Gym_B1F_EventScript_Eli",
       "flag": "0"
     }
@@ -101,7 +101,7 @@
       "dest_warp_id": "5"
     },
     {
-      "x": 4,
+      "x": 2,
       "y": 18,
       "elevation": 3,
       "dest_map": "MAP_LAVARIDGE_TOWN_GYM_1F",
@@ -122,8 +122,8 @@
       "dest_warp_id": "8"
     },
     {
-      "x": 3,
-      "y": 14,
+      "x": 5,
+      "y": 18,
       "elevation": 3,
       "dest_map": "MAP_LAVARIDGE_TOWN_GYM_1F",
       "dest_warp_id": "9"
@@ -185,7 +185,7 @@
       "dest_warp_id": "17"
     },
     {
-      "x": 7,
+      "x": 9,
       "y": 2,
       "elevation": 3,
       "dest_map": "MAP_LAVARIDGE_TOWN_GYM_1F",
@@ -214,7 +214,7 @@
     },
     {
       "x": 4,
-      "y": 16,
+      "y": 15,
       "elevation": 3,
       "dest_map": "MAP_LAVARIDGE_TOWN_GYM_1F",
       "dest_warp_id": "21"
@@ -227,8 +227,8 @@
       "dest_warp_id": "23"
     },
     {
-      "x": 13,
-      "y": 17,
+      "x": 8,
+      "y": 16,
       "elevation": 3,
       "dest_map": "MAP_LAVARIDGE_TOWN_GYM_1F",
       "dest_warp_id": "24"

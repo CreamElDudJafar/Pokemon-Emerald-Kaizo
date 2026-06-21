@@ -1,14 +1,14 @@
 MtPyre_3F_MapScripts::
 	.byte 0
 
-MtPyre_3F_EventScript_William::
-	trainerbattle_single TRAINER_WILLIAM, MtPyre_3F_Text_WilliamIntro, MtPyre_3F_Text_WilliamDefeat
-	msgbox MtPyre_3F_Text_WilliamPostBattle, MSGBOX_AUTOCLOSE
+MtPyre_3F_EventScript_Grunt1::
+	trainerbattle_single TRAINER_GRUNT_MT_PYRE_1, MtPyre_3F_Text_Grunt1Intro, MtPyre_3F_Text_Grunt1Defeat
+	msgbox MtPyre_3F_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-MtPyre_3F_EventScript_Kayla::
-	trainerbattle_single TRAINER_KAYLA, MtPyre_3F_Text_KaylaIntro, MtPyre_3F_Text_KaylaDefeat
-	msgbox MtPyre_3F_Text_KaylaPostBattle, MSGBOX_AUTOCLOSE
+MtPyre_3F_EventScript_Grunt5::
+	trainerbattle_single TRAINER_GRUNT_MT_PYRE_5, MtPyre_3F_Text_Grunt5Intro, MtPyre_3F_Text_Grunt5Defeat
+	msgbox MtPyre_3F_Text_Grunt5PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtPyre_3F_EventScript_Gabrielle::
@@ -32,28 +32,28 @@ MtPyre_3F_EventScript_RematchGabrielle::
 	msgbox MtPyre_3F_Text_GabriellePostRematch, MSGBOX_AUTOCLOSE
 	end
 
-MtPyre_3F_Text_WilliamIntro:
+MtPyre_3F_Text_Grunt1Intro:
 	.string "The rich atmosphere of the mountain\n"
-	.string "has elevated my psychic power!\p"
+	.string "has elevated my AQUA power!\p"
 	.string "A mere child like you…\n"
 	.string "You dream of winning?$"
 
-MtPyre_3F_Text_WilliamDefeat:
+MtPyre_3F_Text_Grunt1Defeat:
 	.string "I drown in self-pity…$"
 
-MtPyre_3F_Text_WilliamPostBattle:
-	.string "My psychic powers have surely\n"
+MtPyre_3F_Text_Grunt1PostBattle:
+	.string "My AQUA powers have surely\n"
 	.string "grown several times, but…$"
 
-MtPyre_3F_Text_KaylaIntro:
+MtPyre_3F_Text_Grunt5Intro:
 	.string "Ahahahaha!\p"
 	.string "This is no place for children, least\n"
 	.string "of all you!$"
 
-MtPyre_3F_Text_KaylaDefeat:
+MtPyre_3F_Text_Grunt5Defeat:
 	.string "I lost that cleanly…$"
 
-MtPyre_3F_Text_KaylaPostBattle:
+MtPyre_3F_Text_Grunt5PostBattle:
 	.string "This means my training is still not\n"
 	.string "enough…\p"
 	.string "I've got to keep working toward the\n"

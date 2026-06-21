@@ -20,14 +20,14 @@ gBattleAnims_Moves::
 	.4byte Move_POUND
 	.4byte Move_KARATE_CHOP
 	.4byte Move_DOUBLE_SLAP
-	.4byte Move_COMET_PUNCH
+	.4byte Move_WEATHER_BALL_WATER
 	.4byte Move_MEGA_PUNCH
 	.4byte Move_PAY_DAY
 	.4byte Move_FIRE_PUNCH
 	.4byte Move_ICE_PUNCH
 	.4byte Move_THUNDER_PUNCH
 	.4byte Move_SCRATCH
-	.4byte Move_VICE_GRIP
+	.4byte Move_WEATHER_BALL_FIRE
 	.4byte Move_GUILLOTINE
 	.4byte Move_RAZOR_WIND
 	.4byte Move_SWORDS_DANCE
@@ -48,7 +48,7 @@ gBattleAnims_Moves::
 	.4byte Move_HEADBUTT
 	.4byte Move_HORN_ATTACK
 	.4byte Move_FURY_ATTACK
-	.4byte Move_HORN_DRILL
+	.4byte Move_DRILL_RUN
 	.4byte Move_TACKLE
 	.4byte Move_BODY_SLAM
 	.4byte Move_WRAP
@@ -82,7 +82,7 @@ gBattleAnims_Moves::
 	.4byte Move_HYPER_BEAM
 	.4byte Move_PECK
 	.4byte Move_DRILL_PECK
-	.4byte Move_SUBMISSION
+	.4byte Move_HIDDEN_POWER_PSYCHIC
 	.4byte Move_LOW_KICK
 	.4byte Move_COUNTER
 	.4byte Move_SEISMIC_TOSS
@@ -106,7 +106,7 @@ gBattleAnims_Moves::
 	.4byte Move_THUNDER
 	.4byte Move_ROCK_THROW
 	.4byte Move_EARTHQUAKE
-	.4byte Move_FISSURE
+	.4byte Move_EARTH_POWER
 	.4byte Move_DIG
 	.4byte Move_TOXIC
 	.4byte Move_CONFUSION
@@ -140,23 +140,23 @@ gBattleAnims_Moves::
 	.4byte Move_EGG_BOMB
 	.4byte Move_LICK
 	.4byte Move_SMOG
-	.4byte Move_SLUDGE
+	.4byte Move_SLUDGE_BOMB
 	.4byte Move_BONE_CLUB
 	.4byte Move_FIRE_BLAST
 	.4byte Move_WATERFALL
 	.4byte Move_CLAMP
 	.4byte Move_SWIFT
-	.4byte Move_SKULL_BASH
-	.4byte Move_SPIKE_CANNON
-	.4byte Move_CONSTRICT
+	.4byte Move_HEAD_SMASH
+	.4byte Move_HIDDEN_POWER_FIRE
+	.4byte Move_HIDDEN_POWER_GRASS
 	.4byte Move_AMNESIA
 	.4byte Move_KINESIS
 	.4byte Move_SOFT_BOILED
 	.4byte Move_HI_JUMP_KICK
 	.4byte Move_GLARE
 	.4byte Move_DREAM_EATER
-	.4byte Move_POISON_GAS
-	.4byte Move_BARRAGE
+	.4byte Move_HIDDEN_POWER_ICE
+	.4byte Move_HIDDEN_POWER_GHOST
 	.4byte Move_LEECH_LIFE
 	.4byte Move_LOVELY_KISS
 	.4byte Move_SKY_ATTACK
@@ -166,7 +166,7 @@ gBattleAnims_Moves::
 	.4byte Move_SPORE
 	.4byte Move_FLASH
 	.4byte Move_PSYWAVE
-	.4byte Move_SPLASH
+	.4byte Move_HIDDEN_POWER_WATER
 	.4byte Move_ACID_ARMOR
 	.4byte Move_CRABHAMMER
 	.4byte Move_EXPLOSION
@@ -175,7 +175,7 @@ gBattleAnims_Moves::
 	.4byte Move_REST
 	.4byte Move_ROCK_SLIDE
 	.4byte Move_HYPER_FANG
-	.4byte Move_SHARPEN
+	.4byte Move_HIDDEN_POWER_DARK
 	.4byte Move_CONVERSION
 	.4byte Move_TRI_ATTACK
 	.4byte Move_SUPER_FANG
@@ -183,7 +183,7 @@ gBattleAnims_Moves::
 	.4byte Move_SUBSTITUTE
 	.4byte Move_STRUGGLE
 	.4byte Move_SKETCH
-	.4byte Move_TRIPLE_KICK
+	.4byte Move_HIDDEN_POWER_ROCK
 	.4byte Move_THIEF
 	.4byte Move_SPIDER_WEB
 	.4byte Move_MIND_READER
@@ -194,7 +194,7 @@ gBattleAnims_Moves::
 	.4byte Move_FLAIL
 	.4byte Move_CONVERSION_2
 	.4byte Move_AEROBLAST
-	.4byte Move_COTTON_SPORE
+	.4byte Move_HIDDEN_POWER_ELECTRIC
 	.4byte Move_REVERSAL
 	.4byte Move_SPITE
 	.4byte Move_POWDER_SNOW
@@ -204,7 +204,7 @@ gBattleAnims_Moves::
 	.4byte Move_FAINT_ATTACK
 	.4byte Move_SWEET_KISS
 	.4byte Move_BELLY_DRUM
-	.4byte Move_SLUDGE_BOMB
+	.4byte Move_GUNK_SHOT
 	.4byte Move_MUD_SLAP
 	.4byte Move_OCTAZOOKA
 	.4byte Move_SPIKES
@@ -216,7 +216,7 @@ gBattleAnims_Moves::
 	.4byte Move_DETECT
 	.4byte Move_BONE_RUSH
 	.4byte Move_LOCK_ON
-	.4byte Move_OUTRAGE
+	.4byte Move_HIDDEN_POWER_GROUND
 	.4byte Move_SANDSTORM
 	.4byte Move_GIGA_DRAIN
 	.4byte Move_ENDURE
@@ -225,8 +225,8 @@ gBattleAnims_Moves::
 	.4byte Move_FALSE_SWIPE
 	.4byte Move_SWAGGER
 	.4byte Move_MILK_DRINK
-	.4byte Move_SPARK
-	.4byte Move_FURY_CUTTER
+	.4byte Move_WILD_CHARGE
+	.4byte Move_X_SCISSORS
 	.4byte Move_STEEL_WING
 	.4byte Move_MEAN_LOOK
 	.4byte Move_ATTRACT
@@ -287,7 +287,7 @@ gBattleAnims_Moves::
 	.4byte Move_CHARGE
 	.4byte Move_TAUNT
 	.4byte Move_HELPING_HAND
-	.4byte Move_TRICK
+	.4byte Move_HIDDEN_POWER_FLYING
 	.4byte Move_ROLE_PLAY
 	.4byte Move_WISH
 	.4byte Move_ASSIST
@@ -300,15 +300,15 @@ gBattleAnims_Moves::
 	.4byte Move_YAWN
 	.4byte Move_KNOCK_OFF
 	.4byte Move_ENDEAVOR
-	.4byte Move_ERUPTION
+	.4byte Move_DRACO_METEOR
 	.4byte Move_SKILL_SWAP
 	.4byte Move_IMPRISON
 	.4byte Move_REFRESH
 	.4byte Move_GRUDGE
-	.4byte Move_SNATCH
+	.4byte Move_HIDDEN_POWER_FIGHTING
 	.4byte Move_SECRET_POWER
 	.4byte Move_DIVE
-	.4byte Move_ARM_THRUST
+	.4byte Move_FORCE_PALM
 	.4byte Move_CAMOUFLAGE
 	.4byte Move_TAIL_GLOW
 	.4byte Move_LUSTER_PURGE
@@ -326,16 +326,16 @@ gBattleAnims_Moves::
 	.4byte Move_BLAST_BURN
 	.4byte Move_HYDRO_CANNON
 	.4byte Move_METEOR_MASH
-	.4byte Move_ASTONISH
+	.4byte Move_SHADOW_SNEAK
 	.4byte Move_WEATHER_BALL
 	.4byte Move_AROMATHERAPY
 	.4byte Move_FAKE_TEARS
-	.4byte Move_AIR_CUTTER
+	.4byte Move_AIR_SLASH
 	.4byte Move_OVERHEAT
 	.4byte Move_ODOR_SLEUTH
 	.4byte Move_ROCK_TOMB
 	.4byte Move_SILVER_WIND
-	.4byte Move_METAL_SOUND
+	.4byte Move_FLASH_CANNON
 	.4byte Move_GRASS_WHISTLE
 	.4byte Move_TICKLE
 	.4byte Move_COSMIC_POWER
@@ -349,7 +349,7 @@ gBattleAnims_Moves::
 	.4byte Move_MUDDY_WATER
 	.4byte Move_BULLET_SEED
 	.4byte Move_AERIAL_ACE
-	.4byte Move_ICICLE_SPEAR
+	.4byte Move_ICE_SHARD
 	.4byte Move_IRON_DEFENSE
 	.4byte Move_BLOCK
 	.4byte Move_HOWL
@@ -359,7 +359,7 @@ gBattleAnims_Moves::
 	.4byte Move_BOUNCE
 	.4byte Move_MUD_SHOT
 	.4byte Move_POISON_TAIL
-	.4byte Move_COVET
+	.4byte Move_HIDDEN_POWER_BUG
 	.4byte Move_VOLT_TACKLE
 	.4byte Move_MAGICAL_LEAF
 	.4byte Move_WATER_SPORT
@@ -728,7 +728,7 @@ Move_PIN_MISSILE:
 	blendoff
 	end
 
-Move_ICICLE_SPEAR:
+Move_ICE_SHARD:
 	loadspritegfx ANIM_TAG_ICICLE_SPEAR
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
@@ -781,6 +781,7 @@ Move_TAKE_DOWN:
 	end
 
 Move_DOUBLE_EDGE:
+Move_HEAD_SMASH:
 	loadspritegfx ANIM_TAG_IMPACT
 	playsewithpan SE_M_SWIFT, SOUND_PAN_ATTACKER
 	complex_palette_blend unused_anim_battler=ANIM_ATTACKER, unused_subpriority_offset=2, selector=F_PAL_ATTACKER, delay=4, num_blends=2, color1=RGB_WHITE, blend_y1=10, color2=RGB_BLACK, blend_y2=0
@@ -1213,6 +1214,19 @@ Move_CUT:
 	end
 
 Move_HIDDEN_POWER:
+Move_HIDDEN_POWER_PSYCHIC:
+Move_HIDDEN_POWER_FIRE:
+Move_HIDDEN_POWER_GRASS:
+Move_HIDDEN_POWER_ICE:
+Move_HIDDEN_POWER_GHOST:
+Move_HIDDEN_POWER_WATER:
+Move_HIDDEN_POWER_DARK:
+Move_HIDDEN_POWER_ROCK:
+Move_HIDDEN_POWER_ELECTRIC:
+Move_HIDDEN_POWER_GROUND:
+Move_HIDDEN_POWER_FIGHTING:
+Move_HIDDEN_POWER_FLYING:
+Move_HIDDEN_POWER_BUG:
 	loadspritegfx ANIM_TAG_RED_ORB
 	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
@@ -1417,7 +1431,7 @@ FireSpinEffect:
 	delay 2
 	return
 
-Move_FURY_CUTTER:
+Move_X_SCISSORS:
 	loadspritegfx ANIM_TAG_CUT
 	monbg ANIM_TARGET
 	setalpha 12, 8
@@ -1942,7 +1956,7 @@ OutrageFlames:
 	create_outrage_flame_sprite ANIM_TARGET, 2, x=0, y=0, duration=30, x_velocity=-5, y_velocity=-3, flicker_duration=3
 	return
 
-Move_SPARK:
+Move_WILD_CHARGE:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_SPARK_2
 	delay 0
@@ -2462,7 +2476,7 @@ FuryAttackLeft:
 	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
 	goto FuryAttackContinue
 
-Move_HORN_DRILL:
+Move_DRILL_RUN:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HORN_HIT
 	jumpifcontest HornDrillInContest
@@ -2606,7 +2620,7 @@ Move_EARTHQUAKE:
 	complex_palette_blend unused_anim_battler=ANIM_ATTACKER, unused_subpriority_offset=2, selector=F_PAL_BG, delay=3, num_blends=1, color1=RGB_BLACK, blend_y1=14, color2=RGB_WHITE, blend_y2=14
 	end
 
-Move_FISSURE:
+Move_EARTH_POWER:
 	loadspritegfx ANIM_TAG_MUD_SAND
 	createvisualtask AnimTask_HorizontalShake, 3, (MAX_BATTLERS_COUNT + 1), 10, 50
 	createvisualtask AnimTask_HorizontalShake, 3, ANIM_TARGET, 10, 50
@@ -2915,7 +2929,7 @@ Move_BARRAGE:
 	loopsewithpan SE_M_STRENGTH, SOUND_PAN_TARGET, 8, 2
 	end
 
-Move_SKY_ATTACK:
+Move_SKY_ATTACK_OLD:
 	choosetwoturnanim SkyAttackSetUp, SkyAttackUnleash
 SkyAttackEnd:
 	end
@@ -3174,6 +3188,7 @@ Move_FORESIGHT:
 	end
 
 Move_DESTINY_BOND:
+Move_SHADOW_SNEAK:
 	loadspritegfx ANIM_TAG_WHITE_SHADOW
 	fadetobg BG_GHOST
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
@@ -3318,14 +3333,8 @@ Move_MILK_DRINK:
 Move_MAGNITUDE:
 	createvisualtask AnimTask_IsPowerOver99, 2
 	waitforvisualfinish
-.ifdef UBFIX
-	jumpreteq FALSE, MagnitudeRegular
-	jumpreteq TRUE, MagnitudeIntense
-.else
 	jumpargeq 15, FALSE, MagnitudeRegular
 	jumpargeq 15, TRUE, MagnitudeIntense
-.endif
-
 MagnitudeEnd:
 	end
 MagnitudeRegular:
@@ -3390,6 +3399,7 @@ Move_MOONLIGHT:
 	end
 
 Move_EXTREME_SPEED:
+Move_SKY_ATTACK:
 	loadspritegfx ANIM_TAG_SPEED_DUST
 	loadspritegfx ANIM_TAG_IMPACT
 	createvisualtask AnimTask_GetAttackerSide, 2
@@ -3802,7 +3812,7 @@ Move_ENDEAVOR:
 	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
 	end
 
-Move_ERUPTION:
+Move_DRACO_METEOR:
 	loadspritegfx ANIM_TAG_WARM_ROCK
 	simple_palette_blend selector=F_PAL_BG | F_PAL_BATTLERS, delay=2, initial_blend_y=0, target_blend_y=4, color=RGB_RED
 	waitforvisualfinish
@@ -4196,7 +4206,7 @@ Move_FAKE_TEARS:
 	waitforvisualfinish
 	end
 
-Move_AIR_CUTTER:
+Move_AIR_SLASH:
 	loadspritegfx ANIM_TAG_AIR_WAVE
 	loadspritegfx ANIM_TAG_CUT
 	loadspritegfx ANIM_TAG_IMPACT
@@ -5948,7 +5958,7 @@ ToxicBubbles:
 	delay 15
 	return
 
-Move_SLUDGE:
+Move_SLUDGE_BOMB:
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
 	createsprite gSludgeProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 0
@@ -5959,7 +5969,7 @@ Move_SLUDGE:
 	waitforvisualfinish
 	end
 
-Move_SLUDGE_BOMB:
+Move_GUNK_SHOT:
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	call SludgeBombProjectile
 	call SludgeBombProjectile
@@ -8571,7 +8581,7 @@ Move_SHEER_COLD:
 	waitbgfadein
 	end
 
-Move_ARM_THRUST:
+Move_FORCE_PALM:
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	loadspritegfx ANIM_TAG_IMPACT
 	splitbgprio ANIM_TARGET
@@ -8853,7 +8863,7 @@ Move_FRENZY_PLANT:
 	blendoff
 	end
 
-Move_METAL_SOUND:
+Move_FLASH_CANNON:
 	loadspritegfx ANIM_TAG_METAL_SOUND_WAVES
 	monbg ANIM_DEF_PARTNER
 	splitbgprio_foes ANIM_TARGET
@@ -9834,6 +9844,8 @@ IceBallImpactShard:
 	return
 
 Move_WEATHER_BALL:
+Move_WEATHER_BALL_WATER:
+Move_WEATHER_BALL_FIRE:
 	loadspritegfx ANIM_TAG_WEATHER_BALL
 	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 8, 1, ANIM_ATTACKER
 	delay 8

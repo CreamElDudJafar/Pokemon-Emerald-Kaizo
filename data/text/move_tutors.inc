@@ -47,7 +47,27 @@ MoveTutor_Text_RolloutTaught:
 	.string "Rolling around in the grass makes me\n"
 	.string "happy. Come on, let's roll!$"
 
-MoveTutor_Text_FuryCutterTeach:
+#ifdef BUG_FIXES
+MoveTutor_Text_XScissorsTeach:
+	.string "There's a move that has a higher\n"
+	.string "chance of scoring critical hits.\p"
+	.string "It's a BUG-type move, and it is\n"
+	.string "wickedly cool.\p"
+	.string "It's called X-SCISSORS.\n"
+	.string "Want me to teach it to a POKéMON?$"
+
+MoveTutor_Text_XScissorsDeclined:
+	.string "We're not on the same wavelength.$"
+
+MoveTutor_Text_XScissorsWhichMon:
+	.string "Yay!\n"
+	.string "Show me which POKéMON I should teach.$"
+
+MoveTutor_Text_XScissorsTaught:
+	.string "I get a thrill watching to see if\n"
+	.string "the move will score a critical hit!$"
+#else
+MoveTutor_Text_XScissorsTeach:
 	.string "There's a move that gets stronger\n"
 	.string "when you keep using it in a row.\p"
 	.string "It's a BUG-type move, and it is\n"
@@ -55,16 +75,17 @@ MoveTutor_Text_FuryCutterTeach:
 	.string "It's called FURY CUTTER.\n"
 	.string "Want me to teach it to a POKéMON?$"
 
-MoveTutor_Text_FuryCutterDeclined:
+MoveTutor_Text_XScissorsDeclined:
 	.string "We're not on the same wavelength.$"
 
-MoveTutor_Text_FuryCutterWhichMon:
+MoveTutor_Text_XScissorsWhichMon:
 	.string "Yay!\n"
 	.string "Show me which POKéMON I should teach.$"
 
-MoveTutor_Text_FuryCutterTaught:
+MoveTutor_Text_XScissorsTaught:
 	.string "I get a thrill watching to see if\n"
 	.string "the move keeps hitting in succession!$"
+#endif
 
 MoveTutor_MimicTeach:
 	.string "Ah, young one!\p"

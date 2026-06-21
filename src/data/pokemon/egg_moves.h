@@ -5,7 +5,7 @@
 const u16 gEggMoves[] = {
     egg_moves(BULBASAUR,
               MOVE_LIGHT_SCREEN,
-              MOVE_SKULL_BASH,
+              MOVE_HEAD_SMASH,
               MOVE_SAFEGUARD,
               MOVE_CHARM,
               MOVE_PETAL_DANCE,
@@ -18,7 +18,7 @@ const u16 gEggMoves[] = {
               MOVE_ANCIENT_POWER,
               MOVE_ROCK_SLIDE,
               MOVE_BITE,
-              MOVE_OUTRAGE,
+              MOVE_HIDDEN_POWER_GROUND,
               MOVE_BEAT_UP,
               MOVE_SWORDS_DANCE,
               MOVE_DRAGON_DANCE),
@@ -38,7 +38,7 @@ const u16 gEggMoves[] = {
               MOVE_FAINT_ATTACK,
               MOVE_FORESIGHT,
               MOVE_STEEL_WING,
-              MOVE_AIR_CUTTER),
+              MOVE_AIR_SLASH),
 
     egg_moves(RATTATA,
               MOVE_SCREECH,
@@ -56,7 +56,7 @@ const u16 gEggMoves[] = {
               MOVE_SCARY_FACE,
               MOVE_QUICK_ATTACK,
               MOVE_TRI_ATTACK,
-              MOVE_ASTONISH,
+              MOVE_SHADOW_SNEAK,
               MOVE_SKY_ATTACK),
 
     egg_moves(EKANS,
@@ -184,7 +184,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(POLIWAG,
               MOVE_MIST,
-              MOVE_SPLASH,
+              MOVE_HIDDEN_POWER_WATER,
               MOVE_BUBBLE_BEAM,
               MOVE_HAZE,
               MOVE_MIND_READER,
@@ -269,11 +269,11 @@ const u16 gEggMoves[] = {
               MOVE_LICK,
               MOVE_PERISH_SONG,
               MOVE_DISABLE,
-              MOVE_HORN_DRILL,
+              MOVE_DRILL_RUN,
               MOVE_SLAM,
               MOVE_ENCORE,
               MOVE_FAKE_OUT,
-              MOVE_ICICLE_SPEAR),
+              MOVE_ICE_SHARD),
 
     egg_moves(GRIMER,
               MOVE_HAZE,
@@ -290,13 +290,13 @@ const u16 gEggMoves[] = {
               MOVE_BARRIER,
               MOVE_RAPID_SPIN,
               MOVE_SCREECH,
-              MOVE_ICICLE_SPEAR),
+              MOVE_ICE_SHARD),
 
     egg_moves(GASTLY,
               MOVE_PSYWAVE,
               MOVE_PERISH_SONG,
               MOVE_HAZE,
-              MOVE_ASTONISH,
+              MOVE_SHADOW_SNEAK,
               MOVE_WILL_O_WISP,
               MOVE_GRUDGE,
               MOVE_EXPLOSION),
@@ -338,7 +338,7 @@ const u16 gEggMoves[] = {
               MOVE_ANCIENT_POWER,
               MOVE_BELLY_DRUM,
               MOVE_SCREECH,
-              MOVE_SKULL_BASH,
+              MOVE_HEAD_SMASH,
               MOVE_PERISH_SONG,
               MOVE_SWORDS_DANCE),
 
@@ -401,7 +401,7 @@ const u16 gEggMoves[] = {
               MOVE_AURORA_BEAM,
               MOVE_OCTAZOOKA,
               MOVE_DISABLE,
-              MOVE_SPLASH,
+              MOVE_HIDDEN_POWER_WATER,
               MOVE_DRAGON_RAGE,
               MOVE_DRAGON_BREATH),
 
@@ -418,7 +418,7 @@ const u16 gEggMoves[] = {
               MOVE_MIMIC,
               MOVE_PSYCH_UP,
               MOVE_FAKE_OUT,
-              MOVE_TRICK),
+              MOVE_HIDDEN_POWER_FLYING),
 
     egg_moves(SCYTHER,
               MOVE_COUNTER,
@@ -444,7 +444,7 @@ const u16 gEggMoves[] = {
               MOVE_DRAGON_DANCE,
               MOVE_CURSE,
               MOVE_SLEEP_TALK,
-              MOVE_HORN_DRILL),
+              MOVE_DRILL_RUN),
 
     egg_moves(EEVEE,
               MOVE_CHARM,
@@ -485,7 +485,7 @@ const u16 gEggMoves[] = {
               MOVE_CHARM,
               MOVE_DOUBLE_EDGE,
               MOVE_CURSE,
-              MOVE_FISSURE,
+              MOVE_EARTH_POWER,
               MOVE_SUBSTITUTE),
 
     egg_moves(DRATINI,
@@ -512,7 +512,7 @@ const u16 gEggMoves[] = {
               MOVE_REVERSAL,
               MOVE_THRASH,
               MOVE_FORESIGHT,
-              MOVE_COVET,
+              MOVE_HIDDEN_POWER_BUG,
               MOVE_HOWL,
               MOVE_CRUSH_CLAW),
 
@@ -533,7 +533,7 @@ const u16 gEggMoves[] = {
               MOVE_FOCUS_ENERGY,
               MOVE_REVERSAL,
               MOVE_SUBSTITUTE,
-              MOVE_TRICK,
+              MOVE_HIDDEN_POWER_FLYING,
               MOVE_ASSIST),
 
     egg_moves(HOOTHOOT,
@@ -577,7 +577,7 @@ const u16 gEggMoves[] = {
               MOVE_METRONOME,
               MOVE_AMNESIA,
               MOVE_BELLY_DRUM,
-              MOVE_SPLASH,
+              MOVE_HIDDEN_POWER_WATER,
               MOVE_MIMIC,
               MOVE_WISH,
               MOVE_SUBSTITUTE),
@@ -714,7 +714,7 @@ const u16 gEggMoves[] = {
               MOVE_ROCK_SLIDE,
               MOVE_BITE,
               MOVE_HEADBUTT,
-              MOVE_ASTONISH,
+              MOVE_SHADOW_SNEAK,
               MOVE_CURSE),
 
     egg_moves(GLIGAR,
@@ -739,7 +739,7 @@ const u16 gEggMoves[] = {
               MOVE_HAZE,
               MOVE_BUBBLE_BEAM,
               MOVE_SUPERSONIC,
-              MOVE_ASTONISH),
+              MOVE_SHADOW_SNEAK),
 
     egg_moves(SHUCKLE,
               MOVE_SWEET_SCENT),
@@ -780,7 +780,7 @@ const u16 gEggMoves[] = {
               MOVE_ROCK_SLIDE,
               MOVE_ANCIENT_POWER,
               MOVE_MUD_SHOT,
-              MOVE_ICICLE_SPEAR,
+              MOVE_ICE_SHARD,
               MOVE_DOUBLE_EDGE),
 
     egg_moves(CORSOLA,
@@ -791,7 +791,7 @@ const u16 gEggMoves[] = {
               MOVE_BARRIER,
               MOVE_INGRAIN,
               MOVE_CONFUSE_RAY,
-              MOVE_ICICLE_SPEAR),
+              MOVE_ICE_SHARD),
 
     egg_moves(REMORAID,
               MOVE_AURORA_BEAM,
@@ -806,7 +806,7 @@ const u16 gEggMoves[] = {
               MOVE_AURORA_BEAM,
               MOVE_QUICK_ATTACK,
               MOVE_FUTURE_SIGHT,
-              MOVE_SPLASH,
+              MOVE_HIDDEN_POWER_WATER,
               MOVE_RAPID_SPIN,
               MOVE_ICE_BALL),
 
@@ -841,7 +841,7 @@ const u16 gEggMoves[] = {
               MOVE_ANCIENT_POWER,
               MOVE_SNORE,
               MOVE_COUNTER,
-              MOVE_FISSURE),
+              MOVE_EARTH_POWER),
 
     egg_moves(STANTLER,
               MOVE_SPITE,
@@ -895,7 +895,7 @@ const u16 gEggMoves[] = {
     egg_moves(LARVITAR,
               MOVE_PURSUIT,
               MOVE_STOMP,
-              MOVE_OUTRAGE,
+              MOVE_HIDDEN_POWER_GROUND,
               MOVE_FOCUS_ENERGY,
               MOVE_ANCIENT_POWER,
               MOVE_DRAGON_DANCE,
@@ -926,9 +926,9 @@ const u16 gEggMoves[] = {
               MOVE_MIRROR_COAT),
 
     egg_moves(POOCHYENA,
-              MOVE_ASTONISH,
+              MOVE_SHADOW_SNEAK,
               MOVE_POISON_FANG,
-              MOVE_COVET,
+              MOVE_HIDDEN_POWER_BUG,
               MOVE_LEER,
               MOVE_YAWN),
 
@@ -937,7 +937,7 @@ const u16 gEggMoves[] = {
               MOVE_PURSUIT,
               MOVE_SUBSTITUTE,
               MOVE_TICKLE,
-              MOVE_TRICK),
+              MOVE_HIDDEN_POWER_FLYING),
 
     egg_moves(LOTAD,
               MOVE_SYNTHESIS,
@@ -983,7 +983,7 @@ const u16 gEggMoves[] = {
               MOVE_DISABLE,
               MOVE_BATON_PASS,
               MOVE_WISH,
-              MOVE_TRICK,
+              MOVE_HIDDEN_POWER_FLYING,
               MOVE_SMELLING_SALT),
 
     egg_moves(WINGULL,
@@ -1007,7 +1007,7 @@ const u16 gEggMoves[] = {
               MOVE_SNORE,
               MOVE_SLEEP_TALK,
               MOVE_CURSE,
-              MOVE_FISSURE,
+              MOVE_EARTH_POWER,
               MOVE_TICKLE),
 
     egg_moves(SKITTY,
@@ -1023,7 +1023,7 @@ const u16 gEggMoves[] = {
     egg_moves(KECLEON,
               MOVE_DISABLE,
               MOVE_MAGIC_COAT,
-              MOVE_TRICK),
+              MOVE_HIDDEN_POWER_FLYING),
 
     egg_moves(NOSEPASS,
               MOVE_MAGNITUDE,
@@ -1031,7 +1031,7 @@ const u16 gEggMoves[] = {
               MOVE_EXPLOSION),
 
     egg_moves(TORKOAL,
-              MOVE_ERUPTION,
+              MOVE_DRACO_METEOR,
               MOVE_ENDURE,
               MOVE_SLEEP_TALK,
               MOVE_YAWN),
@@ -1044,10 +1044,10 @@ const u16 gEggMoves[] = {
     egg_moves(BARBOACH,
               MOVE_THRASH,
               MOVE_WHIRLPOOL,
-              MOVE_SPARK),
+              MOVE_WILD_CHARGE),
 
     egg_moves(LUVDISC,
-              MOVE_SPLASH,
+              MOVE_HIDDEN_POWER_WATER,
               MOVE_SUPERSONIC,
               MOVE_WATER_SPORT,
               MOVE_MUD_SPORT),
@@ -1109,7 +1109,7 @@ const u16 gEggMoves[] = {
               MOVE_YAWN,
               MOVE_ROCK_SLIDE,
               MOVE_CURSE,
-              MOVE_FISSURE),
+              MOVE_EARTH_POWER),
 
     egg_moves(CACNEA,
               MOVE_GRASS_WHISTLE,
@@ -1133,7 +1133,7 @@ const u16 gEggMoves[] = {
               MOVE_FUTURE_SIGHT,
               MOVE_EXTRASENSORY,
               MOVE_SUBSTITUTE,
-              MOVE_TRICK),
+              MOVE_HIDDEN_POWER_FLYING),
 
     egg_moves(PLUSLE,
               MOVE_SUBSTITUTE,
@@ -1178,7 +1178,7 @@ const u16 gEggMoves[] = {
               MOVE_SPIKES,
               MOVE_SYNTHESIS,
               MOVE_PIN_MISSILE,
-              MOVE_COTTON_SPORE),
+              MOVE_HIDDEN_POWER_ELECTRIC),
 
     egg_moves(SLAKOTH,
               MOVE_PURSUIT,
@@ -1229,7 +1229,7 @@ const u16 gEggMoves[] = {
               MOVE_DISABLE,
               MOVE_DESTINY_BOND,
               MOVE_FORESIGHT,
-              MOVE_ASTONISH,
+              MOVE_SHADOW_SNEAK,
               MOVE_IMPRISON),
 
     egg_moves(SEVIPER,
@@ -1248,7 +1248,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(RELICANTH,
               MOVE_MAGNITUDE,
-              MOVE_SKULL_BASH,
+              MOVE_HEAD_SMASH,
               MOVE_WATER_SPORT,
               MOVE_AMNESIA,
               MOVE_SLEEP_TALK,
@@ -1267,7 +1267,7 @@ const u16 gEggMoves[] = {
     egg_moves(VOLBEAT,
               MOVE_BATON_PASS,
               MOVE_SILVER_WIND,
-              MOVE_TRICK),
+              MOVE_HIDDEN_POWER_FLYING),
 
     egg_moves(ILLUMISE,
               MOVE_BATON_PASS,

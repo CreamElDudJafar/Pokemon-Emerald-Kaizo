@@ -128,6 +128,6 @@ Route119_WeatherInstitute_1F_Text_WhatWereAquasUpTo:
 	.string "earth the AQUAS were up to.$"
 
 Route119_WeatherInstitute_1F_Text_TakeRestInBed:
-	.string "There's a bed…\n"
-	.string "Let's take a rest.$"
+	.string "Feeling tired…\n"
+	.string "Time to rest.$"
 

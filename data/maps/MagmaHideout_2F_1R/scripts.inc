@@ -61,7 +61,7 @@ MagmaHideout_2F_1R_Text_Grunt4Defeat:
 MagmaHideout_2F_1R_Text_Grunt4PostBattle:
 	.string "I've already lost.\p"
 	.string "Do I really need to keep running\n"
-	.string "around in a circle?$"
+	.string "on the spot?$"
 
 MagmaHideout_2F_1R_Text_Grunt5Intro:
 	.string "Oh, oh!\n"

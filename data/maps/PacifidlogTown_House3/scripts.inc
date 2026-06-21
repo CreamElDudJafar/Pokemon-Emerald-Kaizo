@@ -5,7 +5,7 @@ PacifidlogTown_House3_EventScript_Trader::
 	lock
 	faceplayer
 	goto_if_set FLAG_PACIFIDLOG_NPC_TRADE_COMPLETED, PacifidlogTown_House3_EventScript_TradeCompleted
-	setvar VAR_0x8008, INGAME_TRADE_HORSEA
+	setvar VAR_0x8008, INGAME_TRADE_ARTICUNO
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
 	copyvar VAR_0x8009, VAR_RESULT
@@ -60,7 +60,7 @@ PacifidlogTown_House3_Text_WillingToTradeIt:
 PacifidlogTown_House3_Text_ItsSubtlyDifferentThankYou:
 	.string "Oh, so this is a {STR_VAR_1}?\p"
 	.string "It's sort of like a {STR_VAR_2},\n"
-	.string "and yet it's subtly different.\p"
+	.string "and yet it's very different.\p"
 	.string "Thank you!$"
 
 PacifidlogTown_House3_Text_WontAcceptAnyLessThanRealMon:
@@ -76,7 +76,7 @@ PacifidlogTown_House3_Text_NotDesperateOrAnything:
 PacifidlogTown_House3_Text_ReallyWantedToGetBagon:
 	.string "I know I could go looking for one\n"
 	.string "on my own, but…\p"
-	.string "But I really wanted to get a BAGON\n"
+	.string "But I wanted a SABLEYE\n"
 	.string "that another TRAINER caught…$"
 
 PacifidlogTown_House3_Text_IsThatAPokedex:

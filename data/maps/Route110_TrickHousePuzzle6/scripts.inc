@@ -27,19 +27,19 @@ Route110_TrickHousePuzzle6_EventScript_FoundScroll::
 	goto Route110_TrickHousePuzzle_EventScript_FoundScroll
 	end
 
-Route110_TrickHousePuzzle6_EventScript_Sophia::
-	trainerbattle_single TRAINER_SOPHIA, Route110_TrickHousePuzzle6_Text_SophiaIntro, Route110_TrickHousePuzzle6_Text_SophiaDefeat
-	msgbox Route110_TrickHousePuzzle6_Text_SophiaPostBattle, MSGBOX_AUTOCLOSE
+Route110_TrickHousePuzzle6_EventScript_May::
+	trainerbattle_single TRAINER_MAY_TRICK_HOUSE, Route110_TrickHousePuzzle6_Text_MayIntro, Route110_TrickHousePuzzle6_Text_MayDefeat
+	msgbox Route110_TrickHousePuzzle6_Text_MayPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route110_TrickHousePuzzle6_EventScript_Benny::
-	trainerbattle_single TRAINER_BENNY, Route110_TrickHousePuzzle6_Text_BennyIntro, Route110_TrickHousePuzzle6_Text_BennyDefeat
-	msgbox Route110_TrickHousePuzzle6_Text_BennyPostBattle, MSGBOX_AUTOCLOSE
+Route110_TrickHousePuzzle6_EventScript_Red::
+	trainerbattle_single TRAINER_RED_TRICK_HOUSE, Route110_TrickHousePuzzle6_Text_RedIntro, Route110_TrickHousePuzzle6_Text_RedDefeat
+	msgbox Route110_TrickHousePuzzle6_Text_RedPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route110_TrickHousePuzzle6_EventScript_Sebastian::
-	trainerbattle_single TRAINER_SEBASTIAN, Route110_TrickHousePuzzle6_Text_SebastianIntro, Route110_TrickHousePuzzle6_Text_SebastianDefeat
-	msgbox Route110_TrickHousePuzzle6_Text_SebastianPostBattle, MSGBOX_AUTOCLOSE
+Route110_TrickHousePuzzle6_EventScript_Brendan::
+	trainerbattle_single TRAINER_BRENDAN_TRICK_HOUSE, Route110_TrickHousePuzzle6_Text_BrendanIntro, Route110_TrickHousePuzzle6_Text_BrendanDefeat
+	msgbox Route110_TrickHousePuzzle6_Text_BrendanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route110_TrickHousePuzzle6_Text_WroteSecretCodeLockOpened:
@@ -49,39 +49,37 @@ Route110_TrickHousePuzzle6_Text_WroteSecretCodeLockOpened:
 	.string "… … … … … … … …\p"
 	.string "The lock clicked open!$"
 
-Route110_TrickHousePuzzle6_Text_SophiaIntro:
+Route110_TrickHousePuzzle6_Text_MayIntro:
 	.string "When I heard there was a strange\n"
 	.string "house, I had to check it out.$"
 
-Route110_TrickHousePuzzle6_Text_SophiaDefeat:
+Route110_TrickHousePuzzle6_Text_MayDefeat:
 	.string "I've discovered a tough TRAINER!$"
 
-Route110_TrickHousePuzzle6_Text_SophiaPostBattle:
+Route110_TrickHousePuzzle6_Text_MayPostBattle:
 	.string "I'm sure having a good time checking\n"
 	.string "this place out.\p"
 	.string "It's a challenge I've found worth\n"
 	.string "repeating!$"
 
-Route110_TrickHousePuzzle6_Text_BennyIntro:
-	.string "Maybe I could get my BIRD POKéMON\n"
-	.string "to fly over the wall…$"
+Route110_TrickHousePuzzle6_Text_RedIntro:
+	.string "………$"
 
-Route110_TrickHousePuzzle6_Text_BennyDefeat:
-	.string "Gwaaah! I blew it!$"
+Route110_TrickHousePuzzle6_Text_RedDefeat:
+	.string "…$"
 
-Route110_TrickHousePuzzle6_Text_BennyPostBattle:
-	.string "Ehehehe… I guess I lost because\n"
-	.string "I was trying to cheat.$"
+Route110_TrickHousePuzzle6_Text_RedPostBattle:
+	.string "………$"
 
-Route110_TrickHousePuzzle6_Text_SebastianIntro:
+Route110_TrickHousePuzzle6_Text_BrendanIntro:
 	.string "I'm getting dizzy from these rotating\n"
 	.string "doors…$"
 
-Route110_TrickHousePuzzle6_Text_SebastianDefeat:
+Route110_TrickHousePuzzle6_Text_BrendanDefeat:
 	.string "Everything's spinning around and\n"
 	.string "around. I can't take this anymore…$"
 
-Route110_TrickHousePuzzle6_Text_SebastianPostBattle:
+Route110_TrickHousePuzzle6_Text_BrendanPostBattle:
 	.string "You don't seem to be affected at all.\n"
 	.string "Or do you have your poker face on?$"
 

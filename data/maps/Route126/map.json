@@ -41,7 +41,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route126_EventScript_Barry",
-      "flag": "0"
+      "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
@@ -54,7 +54,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route126_EventScript_Dean",
-      "flag": "0"
+      "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
@@ -67,7 +67,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route126_EventScript_Nikki",
-      "flag": "0"
+      "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
@@ -80,7 +80,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route126_EventScript_Brenda",
-      "flag": "0"
+      "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -97,16 +97,16 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 15,
-      "y": 66,
+      "x": 5,
+      "y": 72,
       "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "7",
       "script": "Route126_EventScript_Sienna",
-      "flag": "0"
+      "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
@@ -132,7 +132,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "7",
       "script": "Route126_EventScript_Isobel",
-      "flag": "0"
+      "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
@@ -145,7 +145,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "7",
       "script": "Route126_EventScript_Leonardo",
-      "flag": "0"
+      "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     }
   ],
   "warp_events": [],

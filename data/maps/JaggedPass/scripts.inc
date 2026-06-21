@@ -75,7 +75,7 @@ JaggedPass_EventScript_MagmaHideoutGuard::
 	waitmovement 0
 	msgbox JaggedPass_Text_GruntIntro, MSGBOX_DEFAULT
 	closemessage
-	trainerbattle_no_intro TRAINER_GRUNT_JAGGED_PASS, JaggedPass_Text_GruntDefeat
+	trainerbattle_no_intro TRAINER_GRUNT_JAGGED_PASS_1, JaggedPass_Text_GruntDefeat
 	setflag FLAG_BEAT_MAGMA_GRUNT_JAGGED_PASS
 	applymovement LOCALID_MAGMA_HIDEOUT_GUARD, Common_Movement_FaceOriginalDirection
 	waitmovement 0
@@ -92,9 +92,9 @@ JaggedPass_EventScript_GuardDefeated::
 	releaseall
 	end
 
-JaggedPass_EventScript_Eric::
-	trainerbattle_single TRAINER_ERIC, JaggedPass_Text_EricIntro, JaggedPass_Text_EricDefeat
-	msgbox JaggedPass_Text_EricPostBattle, MSGBOX_AUTOCLOSE
+JaggedPass_EventScript_Grunt3::
+	trainerbattle_single TRAINER_GRUNT_JAGGED_PASS_3, JaggedPass_Text_Grunt3Intro, JaggedPass_Text_Grunt3Defeat
+	msgbox JaggedPass_Text_Grunt3PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 JaggedPass_EventScript_Diana::
@@ -142,22 +142,22 @@ JaggedPass_EventScript_Julio::
 	msgbox JaggedPass_Text_JulioPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-JaggedPass_EventScript_Autumn::
-	trainerbattle_single TRAINER_AUTUMN, JaggedPass_Text_AutumnIntro, JaggedPass_Text_AutumnDefeat
-	msgbox JaggedPass_Text_AutumnPostBattle, MSGBOX_AUTOCLOSE
+JaggedPass_EventScript_Grunt2::
+	trainerbattle_single TRAINER_GRUNT_JAGGED_PASS_2, JaggedPass_Text_Grunt2Intro, JaggedPass_Text_Grunt2Defeat
+	msgbox JaggedPass_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-JaggedPass_Text_EricIntro:
+JaggedPass_Text_Grunt3Intro:
 	.string "MT. CHIMNEY's JAGGED PASS…\p"
 	.string "Now this is what I've always wanted\n"
 	.string "in a mountain.\p"
 	.string "This jagged bumpiness…\n"
 	.string "It rocks my soul!$"
 
-JaggedPass_Text_EricDefeat:
+JaggedPass_Text_Grunt3Defeat:
 	.string "Losing left me bitter!$"
 
-JaggedPass_Text_EricPostBattle:
+JaggedPass_Text_Grunt3PostBattle:
 	.string "Yes, I did lose at POKéMON…\p"
 	.string "But, when it comes to the love of\n"
 	.string "the mountains, I have you beat!$"
@@ -252,15 +252,15 @@ JaggedPass_Text_JulioPostBattle:
 	.string "My bicycle bounced around so much,\n"
 	.string "my rear end's sore…$"
 
-JaggedPass_Text_AutumnIntro:
+JaggedPass_Text_Grunt2Intro:
 	.string "I climb this hill every day.\n"
 	.string "I have confidence in my strength!$"
 
-JaggedPass_Text_AutumnDefeat:
+JaggedPass_Text_Grunt2Defeat:
 	.string "Hmm…\n"
 	.string "What went wrong?$"
 
-JaggedPass_Text_AutumnPostBattle:
+JaggedPass_Text_Grunt2PostBattle:
 	.string "What is that odd rock protrusion\n"
 	.string "a little up the hill from here?$"
 

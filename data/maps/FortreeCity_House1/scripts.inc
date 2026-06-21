@@ -5,7 +5,7 @@ FortreeCity_House1_EventScript_Trader::
 	lock
 	faceplayer
 	goto_if_set FLAG_FORTREE_NPC_TRADE_COMPLETED, FortreeCity_House1_EventScript_TradeCompleted
-	setvar VAR_0x8008, INGAME_TRADE_PLUSLE
+	setvar VAR_0x8008, INGAME_TRADE_ZAPDOS
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
 	copyvar VAR_0x8009, VAR_RESULT
@@ -40,7 +40,7 @@ FortreeCity_House1_EventScript_NotRequestedMon::
 	end
 
 FortreeCity_House1_EventScript_TradeCompleted::
-	msgbox FortreeCity_House1_Text_GoingToMakeVolbeatStrong, MSGBOX_DEFAULT
+	msgbox FortreeCity_House1_Text_GoingToMakeBlisseyStrong, MSGBOX_DEFAULT
 	release
 	end
 
@@ -59,7 +59,7 @@ FortreeCity_House1_EventScript_Zigzagoon::
 	end
 
 FortreeCity_House1_Text_YouWillTradeWontYou:
-	.string "Wrooooaaar! I need it!\n"
+	.string "I really need it!\n"
 	.string "I have to get me a {STR_VAR_1}!\l"
 	.string "I'll do anything for it!\p"
 	.string "…Uh… Did you hear that?\n"
@@ -81,10 +81,10 @@ FortreeCity_House1_Text_YouWontTradeMe:
 	.string "No? You won't trade me?\n"
 	.string "Even after I bared my heart to you?$"
 
-FortreeCity_House1_Text_GoingToMakeVolbeatStrong:
-	.string "I'm going to make VOLBEAT super\n"
-	.string "strong from this moment on!\p"
-	.string "I hope you do the same with PLUSLE!$"
+FortreeCity_House1_Text_GoingToMakeBlisseyStrong:
+	.string "I'm going to make BLISSEY super\n"
+	.string "cute from this moment on!\p"
+	.string "I hope you do the same with ZAPDOS!$"
 
 FortreeCity_House1_Text_TradingMemoriesWithOthers:
 	.string "Trading POKéMON with others…\p"

@@ -72,7 +72,7 @@
     },
     {
       "local_id": "LOCALID_SPACE_CENTER_GRUNT_6",
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
       "x": 12,
       "y": 2,
       "elevation": 3,
@@ -100,7 +100,7 @@
     },
     {
       "local_id": "LOCALID_SPACE_CENTER_GRUNT_7",
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
       "x": 14,
       "y": 2,
       "elevation": 3,

@@ -13,6 +13,9 @@ SlateportCity_Mart_EventScript_Clerk::
 
 	.align 2
 SlateportCity_Mart_Pokemart:
+#ifdef RARE_CANDY_MARTS
+	.2byte ITEM_RARE_CANDY
+#endif
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_POTION
@@ -21,7 +24,7 @@ SlateportCity_Mart_Pokemart:
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_REPEL
-	.2byte ITEM_HARBOR_MAIL
+	.2byte ITEM_LIGHT_BALL
 	pokemartlistend
 
 SlateportCity_Mart_EventScript_BlackBelt::

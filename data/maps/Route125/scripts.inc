@@ -21,7 +21,7 @@ Route125_OnFrame:
 	.2byte 0
 
 Route125_EventScript_Nolen::
-	trainerbattle_single TRAINER_NOLEN, Route125_Text_NolenIntro, Route125_Text_NolenDefeat
+	trainerbattle_single TRAINER_NORA, Route125_Text_NolenIntro, Route125_Text_NolenDefeat
 	msgbox Route125_Text_NolenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -31,12 +31,12 @@ Route125_EventScript_Stan::
 	end
 
 Route125_EventScript_Tanya::
-	trainerbattle_single TRAINER_TANYA, Route125_Text_TanyaIntro, Route125_Text_TanyaDefeat
+	trainerbattle_single TRAINER_MAXIE_TERRA_CAVE, Route125_Text_TanyaIntro, Route125_Text_TanyaDefeat
 	msgbox Route125_Text_TanyaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route125_EventScript_Sharon::
-	trainerbattle_single TRAINER_SHARON, Route125_Text_SharonIntro, Route125_Text_SharonDefeat
+	trainerbattle_single TRAINER_CRISTIN_1, Route125_Text_SharonIntro, Route125_Text_SharonDefeat
 	msgbox Route125_Text_SharonPostBattle, MSGBOX_AUTOCLOSE
 	end
 

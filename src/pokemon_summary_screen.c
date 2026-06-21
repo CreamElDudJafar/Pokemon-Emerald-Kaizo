@@ -100,6 +100,8 @@ enum {
 #define PSS_DATA_WINDOW_SKILLS_STATS_LEFT 2 // HP, Attack, Defense
 #define PSS_DATA_WINDOW_SKILLS_STATS_RIGHT 3 // Sp. Attack, Sp. Defense, Speed
 #define PSS_DATA_WINDOW_EXP 4 // Exp, next level
+#define PSS_DATA_WINDOW_SKILLS_IVS_LEFT 5 // HP, Attack, Defense
+#define PSS_DATA_WINDOW_SKILLS_IVS_RIGHT 6 // Sp. Attack, Sp. Defense, Speed
 
 // Dynamic fields for the Battle Moves and Contest Moves pages.
 #define PSS_DATA_WINDOW_MOVE_NAMES 0
@@ -165,6 +167,12 @@ static EWRAM_DATA struct PokemonSummaryScreenData
         u8 sanity; // 0x35
         u8 OTName[17]; // 0x36
         u32 OTID; // 0x48
+        u8 HPIV;
+        u8 atkIV;
+        u8 defIV;
+        u8 spatkIV;
+        u8 spdefIV;
+        u8 speedIV;
     } summary;
     u16 bgTilemapBuffers[PSS_PAGE_COUNT][2][0x400];
     u8 mode;
@@ -271,8 +279,13 @@ static void Task_PrintSkillsPage(u8);
 static void PrintHeldItemName(void);
 static void PrintSkillsPageText(void);
 static void PrintRibbonCount(void);
+static void BufferStat(u8 *dst, s8 natureMod, u32 stat, u32 strId, u32 n);
+static void BufferLeftColumnIVs(void);
+static void PrintLeftColumnIVs(void);
 static void BufferLeftColumnStats(void);
 static void PrintLeftColumnStats(void);
+static void BufferRightColumnIVs(void);
+static void PrintRightColumnIVs(void);
 static void BufferRightColumnStats(void);
 static void PrintRightColumnStats(void);
 static void PrintExpPointsNextLevel(void);
@@ -507,7 +520,11 @@ static const struct WindowTemplate sSummaryTemplate[] =
     },
     [PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT] = {
         .bg = 0,
+        #ifdef SUMMARY_SCREEN_IVS
+        .tilemapLeft = 21,
+        #else
         .tilemapLeft = 22,
+        #endif
         .tilemapTop = 7,
         .width = 5,
         .height = 6,
@@ -649,7 +666,11 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
     },
     [PSS_DATA_WINDOW_SKILLS_STATS_LEFT] = {
         .bg = 0,
+        #ifdef SUMMARY_SCREEN_IVS
+        .tilemapLeft = 15,
+        #else
         .tilemapLeft = 16,
+        #endif
         .tilemapTop = 7,
         .width = 6,
         .height = 6,
@@ -673,6 +694,24 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .height = 4,
         .paletteNum = 6,
         .baseBlock = 543,
+    },
+    [PSS_DATA_WINDOW_SKILLS_IVS_LEFT] = {
+        .bg = 0,
+        .tilemapLeft = 13,
+        .tilemapTop = 7,
+        .width = 2,
+        .height = 6,
+        .paletteNum = 6,
+        .baseBlock = 567,
+    },
+    [PSS_DATA_WINDOW_SKILLS_IVS_RIGHT] = {
+        .bg = 0,
+        .tilemapLeft = 24,
+        .tilemapTop = 7,
+        .width = 2,
+        .height = 6,
+        .paletteNum = 6,
+        .baseBlock = 579,
     },
 };
 static const struct WindowTemplate sPageMovesTemplate[] = // This is used for both battle and contest moves
@@ -1462,6 +1501,12 @@ static bool8 ExtractMonDataToSummaryStruct(struct Pokemon *mon)
         sum->metLevel = GetMonData(mon, MON_DATA_MET_LEVEL);
         sum->metGame = GetMonData(mon, MON_DATA_MET_GAME);
         sum->friendship = GetMonData(mon, MON_DATA_FRIENDSHIP);
+        sum->HPIV = GetMonData(mon, MON_DATA_HP_IV);
+        sum->atkIV = GetMonData(mon, MON_DATA_ATK_IV);
+        sum->defIV = GetMonData(mon, MON_DATA_DEF_IV);
+        sum->spatkIV = GetMonData(mon, MON_DATA_SPATK_IV);
+        sum->spdefIV = GetMonData(mon, MON_DATA_SPDEF_IV);
+        sum->speedIV = GetMonData(mon, MON_DATA_SPEED_IV);
         break;
     default:
         sum->ribbonCount = GetMonData(mon, MON_DATA_RIBBON_COUNT);
@@ -2863,6 +2908,20 @@ static void PrintPageNamesAndStats(void)
 
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_INFO_RENTAL, gText_RentalPkmn, 0, 1, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_INFO_TYPE, gText_TypeSlash, 0, 1, 0, 0);
+    #ifdef SUMMARY_SCREEN_IVS
+    statsXPos = 6 + GetStringCenterAlignXOffset(FONT_NORMAL, gText_HP4, 18);
+    PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_LEFT, gText_HP4, statsXPos, 1, 0, 1);
+    statsXPos = 6 + GetStringCenterAlignXOffset(FONT_NORMAL, gText_Attack3, 18);
+    PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_LEFT, gText_Attack3, statsXPos, 17, 0, 1);
+    statsXPos = 6 + GetStringCenterAlignXOffset(FONT_NORMAL, gText_Defense3, 18);
+    PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_LEFT, gText_Defense3, statsXPos, 33, 0, 1);
+    statsXPos = 2 + GetStringCenterAlignXOffset(FONT_NORMAL, gText_SpAtk4, 21);
+    PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, gText_SpAtk4, statsXPos, 1, 0, 1);
+    statsXPos = 2 + GetStringCenterAlignXOffset(FONT_NORMAL, gText_SpDef4, 21);
+    PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, gText_SpDef4, statsXPos, 17, 0, 1);
+    statsXPos = 2 + GetStringCenterAlignXOffset(FONT_NORMAL, gText_Speed2, 21);
+    PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, gText_Speed2, statsXPos, 33, 0, 1);
+    #else
     statsXPos = 6 + GetStringCenterAlignXOffset(FONT_NORMAL, gText_HP4, 42);
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_LEFT, gText_HP4, statsXPos, 1, 0, 1);
     statsXPos = 6 + GetStringCenterAlignXOffset(FONT_NORMAL, gText_Attack3, 42);
@@ -2875,6 +2934,7 @@ static void PrintPageNamesAndStats(void)
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, gText_SpDef4, statsXPos, 17, 0, 1);
     statsXPos = 2 + GetStringCenterAlignXOffset(FONT_NORMAL, gText_Speed2, 36);
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, gText_Speed2, statsXPos, 33, 0, 1);
+    #endif
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_EXP, gText_ExpPoints, 6, 1, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_EXP, gText_NextLv, 6, 17, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATUS, gText_Status, 2, 1, 0, 1);
@@ -3302,8 +3362,12 @@ static void PrintSkillsPageText(void)
 {
     PrintHeldItemName();
     PrintRibbonCount();
+    BufferLeftColumnIVs();
+    PrintLeftColumnIVs();
     BufferLeftColumnStats();
     PrintLeftColumnStats();
+    BufferRightColumnIVs();
+    PrintRightColumnIVs();
     BufferRightColumnStats();
     PrintRightColumnStats();
     PrintExpPointsNextLevel();
@@ -3322,15 +3386,19 @@ static void Task_PrintSkillsPage(u8 taskId)
         PrintRibbonCount();
         break;
     case 3:
-        BufferLeftColumnStats();
+        BufferLeftColumnIVs();
+        PrintLeftColumnIVs();
         break;
     case 4:
+        BufferLeftColumnStats();
         PrintLeftColumnStats();
         break;
     case 5:
-        BufferRightColumnStats();
+        BufferRightColumnIVs();
+        PrintRightColumnIVs();
         break;
     case 6:
+        BufferRightColumnStats();
         PrintRightColumnStats();
         break;
     case 7:
@@ -3388,23 +3456,61 @@ static void PrintRibbonCount(void)
     PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_RIBBON_COUNT), text, x, 1, 0, 0);
 }
 
-static void BufferLeftColumnStats(void)
+static void BufferStat(u8 *dst, s8 natureMod, u32 stat, u32 strId, u32 n)
 {
-    u8 *currentHPString = Alloc(8);
-    u8 *maxHPString = Alloc(8);
-    u8 *attackString = Alloc(8);
-    u8 *defenseString = Alloc(8);
+    static const u8 sTextNatureDown[] = _("{COLOR}{08}");
+    static const u8 sTextNatureUp[] = _("{COLOR}{05}");
+    static const u8 sTextNatureNeutral[] = _("{COLOR}{01}");
+    u8 *txtPtr;
 
-    ConvertIntToDecimalStringN(currentHPString, sMonSummaryScreen->summary.currentHP, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(maxHPString, sMonSummaryScreen->summary.maxHP, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(attackString, sMonSummaryScreen->summary.atk, STR_CONV_MODE_RIGHT_ALIGN, 7);
-    ConvertIntToDecimalStringN(defenseString, sMonSummaryScreen->summary.def, STR_CONV_MODE_RIGHT_ALIGN, 7);
+    #ifdef NATURE_STAT_COLORS
+    if (natureMod == 0)
+        txtPtr = StringCopy(dst, sTextNatureNeutral);
+    else if (natureMod > 0)
+        txtPtr = StringCopy(dst, sTextNatureUp);
+    else
+        txtPtr = StringCopy(dst, sTextNatureDown);
+    #else
+        txtPtr = StringCopy(dst, sTextNatureNeutral);
+    #endif
+
+    ConvertIntToDecimalStringN(txtPtr, stat, STR_CONV_MODE_RIGHT_ALIGN, n);
+    DynamicPlaceholderTextUtil_SetPlaceholderPtr(strId, dst);
+}
+
+static void BufferLeftColumnIVs(void)
+{
+    ConvertIntToDecimalStringN(gStringVar1, sMonSummaryScreen->summary.HPIV, STR_CONV_MODE_RIGHT_ALIGN, 2);
+    ConvertIntToDecimalStringN(gStringVar2, sMonSummaryScreen->summary.atkIV, STR_CONV_MODE_RIGHT_ALIGN, 2);
+    ConvertIntToDecimalStringN(gStringVar3, sMonSummaryScreen->summary.defIV, STR_CONV_MODE_RIGHT_ALIGN, 2);
 
     DynamicPlaceholderTextUtil_Reset();
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, currentHPString);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, maxHPString);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, attackString);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(3, defenseString);
+    DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
+    DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar2);
+    DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gStringVar3);
+    DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsRightColumnLayout);
+}
+
+static void PrintLeftColumnIVs(void)
+{
+    #ifdef SUMMARY_SCREEN_IVS
+    AddTextPrinterParameterized4(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_IVS_LEFT), FONT_NARROW, 6, 1, 0, 0, sTextColors[0], 0, gStringVar4);
+    #endif
+}
+
+static void BufferLeftColumnStats(void)
+{
+    u8 *currentHPString = Alloc(20);
+    u8 *maxHPString = Alloc(20);
+    u8 *attackString = Alloc(20);
+    u8 *defenseString = Alloc(20);
+    const s8 *natureMod = gNatureStatTable[sMonSummaryScreen->summary.nature];
+
+    DynamicPlaceholderTextUtil_Reset();
+    BufferStat(currentHPString, 0, sMonSummaryScreen->summary.currentHP, 0, 3);
+    BufferStat(maxHPString, 0, sMonSummaryScreen->summary.maxHP, 1, 3);
+    BufferStat(attackString, natureMod[STAT_ATK - 1], sMonSummaryScreen->summary.atk, 2, 7);
+    BufferStat(defenseString, natureMod[STAT_DEF - 1], sMonSummaryScreen->summary.def, 3, 7);
     DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsLeftColumnLayout);
 
     Free(currentHPString);
@@ -3418,16 +3524,34 @@ static void PrintLeftColumnStats(void)
     PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_STATS_LEFT), gStringVar4, 4, 1, 0, 0);
 }
 
-static void BufferRightColumnStats(void)
+static void BufferRightColumnIVs(void)
 {
-    ConvertIntToDecimalStringN(gStringVar1, sMonSummaryScreen->summary.spatk, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(gStringVar2, sMonSummaryScreen->summary.spdef, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(gStringVar3, sMonSummaryScreen->summary.speed, STR_CONV_MODE_RIGHT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar1, sMonSummaryScreen->summary.spatkIV, STR_CONV_MODE_RIGHT_ALIGN, 2);
+    ConvertIntToDecimalStringN(gStringVar2, sMonSummaryScreen->summary.spdefIV, STR_CONV_MODE_RIGHT_ALIGN, 2);
+    ConvertIntToDecimalStringN(gStringVar3, sMonSummaryScreen->summary.speedIV, STR_CONV_MODE_RIGHT_ALIGN, 2);
 
     DynamicPlaceholderTextUtil_Reset();
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar2);
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gStringVar3);
+    DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsRightColumnLayout);
+}
+
+static void PrintRightColumnIVs(void)
+{
+    #ifdef SUMMARY_SCREEN_IVS
+    AddTextPrinterParameterized4(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_IVS_RIGHT), FONT_NARROW, 6, 1, 0, 0, sTextColors[0], 0, gStringVar4);
+    #endif
+}
+
+static void BufferRightColumnStats(void)
+{
+    const s8 *natureMod = gNatureStatTable[sMonSummaryScreen->summary.nature];
+
+    DynamicPlaceholderTextUtil_Reset();
+    BufferStat(gStringVar1, natureMod[STAT_SPATK - 1], sMonSummaryScreen->summary.spatk, 0, 3);
+    BufferStat(gStringVar2, natureMod[STAT_SPDEF - 1], sMonSummaryScreen->summary.spdef, 1, 3);
+    BufferStat(gStringVar3, natureMod[STAT_SPEED - 1], sMonSummaryScreen->summary.speed, 2, 3);
     DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsRightColumnLayout);
 }
 
@@ -3561,10 +3685,29 @@ static void PrintMoveNameAndPP(u8 moveIndex)
 
 static void PrintMovePowerAndAccuracy(u16 moveIndex)
 {
+    struct Pokemon *mon = &sMonSummaryScreen->currentMon;
     const u8 *text;
     if (moveIndex != 0)
     {
         FillWindowPixelRect(PSS_LABEL_WINDOW_MOVES_POWER_ACC, PIXEL_FILL(0), 53, 0, 19, 32);
+
+        #ifdef SHOW_HIDDEN_POWER
+        if (moveIndex == MOVE_HIDDEN_POWER)
+        {
+            u8 powerBits = ((GetMonData(mon, MON_DATA_HP_IV) & 2) >> 1)
+                         | ((GetMonData(mon, MON_DATA_ATK_IV) & 2) << 0)
+                         | ((GetMonData(mon, MON_DATA_DEF_IV) & 2) << 1)
+                         | ((GetMonData(mon, MON_DATA_SPEED_IV) & 2) << 2)
+                         | ((GetMonData(mon, MON_DATA_SPATK_IV)& 2) << 3)
+                         | ((GetMonData(mon, MON_DATA_SPDEF_IV) & 2) << 4);
+
+            u8 powerForHiddenPower = (40 * powerBits) / 63 + 30;
+
+            ConvertIntToDecimalStringN(gStringVar1, powerForHiddenPower, STR_CONV_MODE_RIGHT_ALIGN, 3);
+            text = gStringVar1;
+        }
+        else
+        #endif
 
         if (gBattleMoves[moveIndex].power < 2)
         {
@@ -3844,6 +3987,23 @@ static void SetMoveTypeIcons(void)
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
         if (summary->moves[i] != MOVE_NONE)
+            #ifdef SHOW_HIDDEN_POWER
+            if (summary->moves[i] == MOVE_HIDDEN_POWER)
+            {
+                u8 typeBits  = ((sMonSummaryScreen->summary.HPIV & 1) << 0)
+                             | ((sMonSummaryScreen->summary.atkIV & 1) << 1)
+                             | ((sMonSummaryScreen->summary.defIV & 1) << 2)
+                             | ((sMonSummaryScreen->summary.speedIV & 1) << 3)
+                             | ((sMonSummaryScreen->summary.spatkIV & 1) << 4)
+                             | ((sMonSummaryScreen->summary.spdefIV & 1) << 5);
+                u8 type = ((NUMBER_OF_MON_TYPES - 3) * typeBits) / 63 + 1;
+                if (type >= TYPE_MYSTERY) type++;
+                type |= F_DYNAMIC_TYPE_IGNORE_PHYSICALITY | F_DYNAMIC_TYPE_SET;
+                type &= 0x3F;
+                SetTypeSpritePosAndPal(type, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
+            }
+            else
+            #endif
             SetTypeSpritePosAndPal(gBattleMoves[summary->moves[i]].type, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
         else
             SetSpriteInvisibility(i + SPRITE_ARR_ID_TYPE, TRUE);
@@ -3872,6 +4032,23 @@ static void SetNewMoveTypeIcon(void)
     else
     {
         if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
+            #ifdef SHOW_HIDDEN_POWER
+            if (sMonSummaryScreen->newMove == MOVE_HIDDEN_POWER)
+            {
+                u8 typeBits  = ((sMonSummaryScreen->summary.HPIV & 1) << 0)
+                             | ((sMonSummaryScreen->summary.atkIV & 1) << 1)
+                             | ((sMonSummaryScreen->summary.defIV & 1) << 2)
+                             | ((sMonSummaryScreen->summary.speedIV & 1) << 3)
+                             | ((sMonSummaryScreen->summary.spatkIV & 1) << 4)
+                             | ((sMonSummaryScreen->summary.spdefIV & 1) << 5);
+                u8 type = ((NUMBER_OF_MON_TYPES - 3) * typeBits) / 63 + 1;
+                if (type >= TYPE_MYSTERY) type++;
+                type |= F_DYNAMIC_TYPE_IGNORE_PHYSICALITY | F_DYNAMIC_TYPE_SET;
+                type &= 0x3F;
+                SetTypeSpritePosAndPal(type, 85, 96, SPRITE_ARR_ID_TYPE + 4);
+            }
+            else
+            #endif
             SetTypeSpritePosAndPal(gBattleMoves[sMonSummaryScreen->newMove].type, 85, 96, SPRITE_ARR_ID_TYPE + 4);
         else
             SetTypeSpritePosAndPal(NUMBER_OF_MON_TYPES + gContestMoves[sMonSummaryScreen->newMove].contestCategory, 85, 96, SPRITE_ARR_ID_TYPE + 4);

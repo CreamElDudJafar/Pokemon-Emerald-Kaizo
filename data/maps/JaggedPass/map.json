@@ -15,7 +15,7 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
       "x": 10,
       "y": 8,
       "elevation": 3,
@@ -23,16 +23,16 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "JaggedPass_EventScript_Eric",
-      "flag": "0"
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "JaggedPass_EventScript_Grunt3",
+      "flag": "FLAG_HIDE_JAGGED_PASS_MAGMA_GUARD"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 16,
+      "x": 17,
       "y": 35,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -55,10 +55,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 9,
-      "y": 21,
+      "x": 13,
+      "y": 36,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -68,7 +68,7 @@
     },
     {
       "local_id": "LOCALID_MAGMA_HIDEOUT_GUARD",
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
       "x": 16,
       "y": 19,
       "elevation": 3,
@@ -81,22 +81,22 @@
       "flag": "FLAG_HIDE_JAGGED_PASS_MAGMA_GUARD"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 14,
-      "y": 25,
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
+      "x": 19,
+      "y": 8,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "JaggedPass_EventScript_Autumn",
-      "flag": "0"
+      "trainer_sight_or_berry_tree_id": "6",
+      "script": "JaggedPass_EventScript_Grunt2",
+      "flag": "FLAG_HIDE_JAGGED_PASS_MAGMA_GUARD"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",
-      "x": 18,
-      "y": 25,
+      "x": 16,
+      "y": 36,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,

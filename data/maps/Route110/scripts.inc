@@ -838,8 +838,8 @@ Route110_Text_TwoRoads:
 	.string "Perhaps that is right and fair.$"
 
 Route110_Text_WalkOnTheLowRoad:
-	.string "I don't have a BIKE, so I'll take\n"
-	.string "a leisurely walk on the low road.$"
+	.string "I imagine this door will open\n"
+	.string "at some point much later.$"
 
 Route110_Text_BikeTechniques:
 	.string "Learning techniques will make BIKE\n"

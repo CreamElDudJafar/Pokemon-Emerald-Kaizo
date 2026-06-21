@@ -11,9 +11,9 @@ VictoryRoad_B1F_EventScript_Shannon::
 	msgbox VictoryRoad_B1F_Text_ShannonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-VictoryRoad_B1F_EventScript_Michelle::
-	trainerbattle_single TRAINER_MICHELLE, VictoryRoad_B1F_Text_MichelleIntro, VictoryRoad_B1F_Text_MichelleDefeat
-	msgbox VictoryRoad_B1F_Text_MichellePostBattle, MSGBOX_AUTOCLOSE
+VictoryRoad_B1F_EventScript_Red::
+	trainerbattle_single TRAINER_RED_VICTORY_ROAD, VictoryRoad_B1F_Text_RedIntro, VictoryRoad_B1F_Text_RedDefeat
+	msgbox VictoryRoad_B1F_Text_RedPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 VictoryRoad_B1F_EventScript_Mitchell::
@@ -51,16 +51,14 @@ VictoryRoad_B1F_Text_ShannonPostBattle:
 	.string "By being together all the time, trust\n"
 	.string "grows between POKéMON and TRAINERS.$"
 
-VictoryRoad_B1F_Text_MichelleIntro:
-	.string "This isn't the goal. It's only a place\n"
-	.string "on the way to the POKéMON LEAGUE.$"
+VictoryRoad_B1F_Text_RedIntro:
+	.string "....................$"
 
-VictoryRoad_B1F_Text_MichelleDefeat:
-	.string "That's the way!$"
+VictoryRoad_B1F_Text_RedDefeat:
+	.string ".......$"
 
-VictoryRoad_B1F_Text_MichellePostBattle:
-	.string "You'll do fine, for sure!\n"
-	.string "Your POKéMON are all eager to go!$"
+VictoryRoad_B1F_Text_RedPostBattle:
+	.string ".................$"
 
 VictoryRoad_B1F_Text_MitchellIntro:
 	.string "My POKéMON are cosmically\n"
