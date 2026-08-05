@@ -1,5 +1,7 @@
 # Pokémon Emerald Kaizo
 
+<img width="1016" height="674" alt="ek" src="https://github.com/user-attachments/assets/97658bf5-0606-4697-b816-cb8b91ed427e" />
+
 This is a decompilation of Pokémon Emerald Kaizo.
 
 It builds the following ROM by default:
