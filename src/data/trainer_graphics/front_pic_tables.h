@@ -189,7 +189,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(PIKE_QUEEN_LUCY, gTrainerFrontPic_PikeQueenLucy, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(PYRAMID_KING_BRANDON, gTrainerFrontPic_PyramidKingBrandon, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(RED, gTrainerFrontPic_Red, TRAINER_PIC_SIZE),
-    TRAINER_SPRITE(LEAF, gTrainerFrontPic_MagmaGruntF, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(LEAF, gTrainerFrontPic_Leaf, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(RS_BRENDAN, gTrainerFrontPic_RubySapphireBrendan, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(RS_MAY, gTrainerFrontPic_RubySapphireMay, TRAINER_PIC_SIZE),
 };

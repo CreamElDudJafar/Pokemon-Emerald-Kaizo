@@ -6,7 +6,7 @@ This is a decompilation of Pokémon Emerald Kaizo.
 
 It builds the following ROM by default:
 
-* [**pokeemeraldkaizo.gba**] `sha1: ea800645c396e6afacbe12a22b94328479e8d402`
+* [**pokeemeraldkaizo.gba**] `sha1:  43d219d8d9d8c9be155ff9acb2763e034824ea0a`
 
 Note: Due to how binary hacking tools work, and due to some changes in EK 1.1, this is not a 1-to-1 recreation. However, the game still plays in the exact same way.
 
